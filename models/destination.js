@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+  module.exports = function(sequelize, DataTypes) {
     var Destination = sequelize.define("Destination", {
       country: {
         type: DataTypes.STRING
@@ -21,7 +21,22 @@ module.exports = function(sequelize, DataTypes) {
       developed: {
         type: DataTypes.BOOLEAN
       },
+      climate: {
+        type: DataTypes.STRING
+      },
+      setting: {
+        type: DataTypes.BOOLEAN
+      },
+      crowds: {
+        type: DataTypes.BOOLEAN
+      },
+      food: {
+        type: DataTypes.BOOLEAN
+      },
       tourism: {
+        type: DataTypes.BOOLEAN
+      },
+      outdoor: {
         type: DataTypes.BOOLEAN
       },
       museums: {
@@ -32,3 +47,4 @@ module.exports = function(sequelize, DataTypes) {
     return Destination;
   };
   
+
