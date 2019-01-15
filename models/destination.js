@@ -6,16 +6,19 @@
       climate: {
         type: DataTypes.STRING
       },
-      setting: {
+      category: {
         type: DataTypes.BOOLEAN
       },
-      crowds: {
+      bestSeason: {
+        type: DataTypes.STRING
+      },
+      crowded: {
         type: DataTypes.BOOLEAN
       },
       food: {
         type: DataTypes.BOOLEAN
       },
-      travler: {
+      tourism: {
         type: DataTypes.BOOLEAN
       },
       outdoor: {
