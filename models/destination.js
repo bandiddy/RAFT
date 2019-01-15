@@ -14,7 +14,19 @@ module.exports = function(sequelize, DataTypes) {
       },
       category: {
         type: DataTypes.STRING
-      } 
+      },
+      outdoorActivities: {
+        type: DataTypes.BOOLEAN
+      },
+      developed: {
+        type: DataTypes.BOOLEAN
+      },
+      tourism: {
+        type: DataTypes.BOOLEAN
+      },
+      museums: {
+        type: DataTypes.BOOLEAN
+      }
     });
 
     return Destination;
