@@ -3,6 +3,24 @@
       country: {
         type: DataTypes.STRING
       },
+      weather: {
+        type: DataTypes.STRING
+      },
+      style: {
+        type: DataTypes.STRING
+      },
+      crowded: {
+        type: DataTypes.BOOLEAN
+      },
+      category: {
+        type: DataTypes.STRING
+      },
+      outdoorActivities: {
+        type: DataTypes.BOOLEAN
+      },
+      developed: {
+        type: DataTypes.BOOLEAN
+      },
       climate: {
         type: DataTypes.STRING
       },
@@ -15,7 +33,7 @@
       food: {
         type: DataTypes.BOOLEAN
       },
-      travler: {
+      tourism: {
         type: DataTypes.BOOLEAN
       },
       outdoor: {

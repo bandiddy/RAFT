@@ -1,20 +1,20 @@
 var express = require("express");
+var path = require("path");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
-
+var passport = require("../config/passport.js");
 var router = express.Router();
-
-var cat = require("../models/cat.js");
+var db = require("../models");
 
 router.get("/", function (req, res) {
-
+    res.sendFile(path.join(__dirname, '../views/index.html'));
 });
 
-router.get("/login", function (req, res) {
-
+router.get("/signup", function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/signup.html'));
 });
 
 router.get("/members", isAuthenticated, function (req, res) {
-
+    res.sendFile(path.join(__dirname, '../views/members.html'));
 });
 
 router.post("/api/login", passport.authenticate("local"), function (req, res) {
