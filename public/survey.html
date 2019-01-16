@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Survey Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <h2>Travel Questions</h2>
+            <h3><strong>Who are You?</strong></h3>
+            <h4>Name (Required)</h4>
+            <input type="text" name="" id="name" class="form-control" required>
+
+            <hr>
+            <h3><strong>Question 1</strong></h3>
+            <h4>On vacation, would you rather be a traveler or a tourist?</h4>
+            <select data-placeholder="" class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">Traveler</option>
+                <option value="2">Tourist</option>
+            </select>
+
+            <h3><strong>Question 2</strong></h3>
+            <h4>What kind of climate do you enjoy?</h4>
+            <select data-placeholder="" class="chosen-select" id="q1">
+                <option value=""></option>
+                <option value="1">Sunny</option>
+                <option value="2">Tropical</option>
+                <option value="3">Snowy</option>
+                <option value="4">Temperate</option>
+            </select>
+
+            <h3><strong>Question 3</strong></h3>
+            <h4>What kind of travel setting do you enjoy?</h4>
+            <select data-placeholder="" class="chosen-select" id="q2">
+                <option value=""></option>
+                <option value="1">Relaxing</option>
+                <option value="2">Adventure</option>
+            </select>
+
+
+            <h3><strong>Question 4</strong></h3>
+            <h4>Do you enjoy traveling with others?</h4>
+            <select data-placeholder="" class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>
+
+            <h3><strong>Question 5</strong></h3>
+            <h4>Is adventurous food a priotity?</h4>
+            <select data-placeholder="" class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>
+
+
+
+            <h3><strong>Question 6</strong></h3>
+            <h4>Do you enjoy outdoor adventures? </h4>
+            <select data-placeholder="" class="chosen-select" id="q5">
+                <option value=""></option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>
+
+
+            <h3><strong>Question 7</strong></h3>
+            <h4>Would you enjoy learning about other cultures on vacations?</h4>
+            <select data-placeholder="" class="chosen-select" id="q6">
+                <option value=""></option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+
+            </select>
+
+
+            <h3><strong>Question 8</strong></h3>
+            <h4>What time of the year do you plan on traveling?</h4>
+            <select data-placeholder="" class="chosen-select" id="q7">
+                <option value=""></option>
+                <option value="1">Fall</option>
+                <option value="2">Winter</option>
+                <option value="3">Spring</option>
+                <option value="4">Summer</option>
+            </select>
+
+
+            <br>
+            <br>
+
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+                    aria-hidden="true"></i>
+                Submit</button>
+
+            <hr>
+            <footer class="footer">
+                <div class="container">
+                    <p><a href="#">API Friends List</a> | <a href="#"> GitHub Repo</a></p>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <div id="resultsModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="matchName"></h2>
+                        <img id="matchImg" src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg"
+                            alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+            var config = {
+                '.chosen-select': {},
+                '.chosen-select-deselect': { allow_single_deselect: true },
+                '.chosen-select-no-single': { disable_search_threshold: 8 },
+                '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+                '.chosen-select-width': { width: "95%" }
+            }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+            }
+
+            $("#submit").on("click", function () {
+                function validateForm() {
+                    var isValid = true;
+                    $('.form-control').each(function () {
+                        if ($(this).val() === '')
+                            isValid = false;
+                    });
+                    $('.chosen-select').each(function () {
+                        if ($(this).val() === "")
+                            isValid = false
+                    })
+                    return isValid;
+                }
+                if (validateForm() == true) {
+
+                    var userData = {
+                        name: $("#name").val(),
+                        scores: [
+                            $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val()
+                        ]
+                    }
+
+
+
+                    $.post("/api/friends", userData).done(function (data) {
+
+                        $("#matchName").text(data.name);
+                        $("#resultsModal").modal('toggle');
+                    });
+                }
+                else {
+                    alert("Please fill out all fields before submitting!");
+                }
+
+                return false;
+            });
+
+        </script>
+
+
+</body>
+
+</html>
