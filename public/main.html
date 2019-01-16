@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Main Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="../public/assets/js/main.js"></script>
 </head>
 
 <body>
     <section class="hero is-primary">
         <div class="hero-body">
-          <div class="container">
-            <h1 class="title">
-                RAFT
-            </h1>
-            <h2 class="subtitle">
-                Stop drowning in your travel planning anxiety
-            </h2>
-          </div>
+            <div class="container">
+                <h1 class="title">
+                    RAFT
+                </h1>
+                <h2 class="subtitle">
+                    Stop drowning in your travel planning anxiety
+                </h2>
+            </div>
         </div>
-      </section>
-      <a class="button is-primary is-rounded">Grab our RAFT here</a>
-                
-      <div class="content">
-        <ol type="1" id="userData">
-          
-        </ol>
-    <script type="text/javascript">
-       
-    
-    </script>
+    </section>
+    <a class="button is-primary is-rounded">Grab our RAFT here</a>
+    <form class="data-input">
+        <input class="input is-rounded" type="text" id="userInput" placeholder="Where have you been?">
+        <div class="control">
+            <button class="button is-primary is-rounded" type="submit" id="create-data">Submit</button>
+            <button class="button is-light is-rounded" type="submit" id="create-data">Cancel</button>
+        </div>
+    </form>
+    <span class="data-container">
+    </span>
+        
 </body>
 
 </html>
