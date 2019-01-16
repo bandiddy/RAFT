@@ -10,7 +10,7 @@ var db = require("../models");
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-// run 'npm run reset-db' in terminal to reset and add the original 10 items in database
+// run 'npm run reset' in terminal to reset and add the original 22 items in database
 var reset = process.argv[2] === 'reset' ? { force: true } : {};
 db.sequelize.sync(reset).then(function () {
   //1
