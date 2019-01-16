@@ -10,7 +10,18 @@
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
     <link href="../public/assets/css/style.css" rel="stylesheet">
 </head>
-
+<section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-2">
+              RAFT
+            </h1>
+            <h2 class="subtitle is-4">
+              Stop drowning in your travel planning anxiety
+            </h2>
+          </div>
+        </div>
+      </section>
 <body>
     <section class="hero is-primary is-bold">
         <div class="hero-body">
@@ -30,22 +41,17 @@
     </section>
     <div class="container">
         <div>
-            <h2>Travel Questions</h2>
-            <h3><strong>Who are You?</strong></h3>
-            <h4>Name (Required)</h4>
+            <p class="title is-1 is-center">Travel Questions</p>
+            <p class="title is-3">Who are you?</p>
+            <p class="subtitle is-5">Name (Required)</p>
             <input type="text" name="" id="name" class="form-control" required>
 
             <hr>
-            <h3><strong>Question 1</strong></h3>
-            <h4>On vacation, would you rather be a traveler or a tourist?</h4>
-            <select data-placeholder="" class="chosen-select" id="q3">
-                <option value=""></option>
-                <option value="1">Traveler</option>
-                <option value="2">Tourist</option>
-            </select>
 
-            <h3><strong>Question 2</strong></h3>
-            <h4>What kind of climate do you enjoy?</h4>
+
+    
+            <p class="title is-3">Question 1</p>
+            <p class="subtitle is-5">What kind of climate do you enjoy?</p>
             <select data-placeholder="" class="chosen-select" id="q1">
                 <option value=""></option>
                 <option value="1">Sunny</option>
@@ -54,54 +60,35 @@
                 <option value="4">Temperate</option>
             </select>
 
-            <h3><strong>Question 3</strong></h3>
+            <!-- <h3><strong>Question 3</strong></h3>
             <h4>What kind of travel setting do you enjoy?</h4>
             <select data-placeholder="" class="chosen-select" id="q2">
                 <option value=""></option>
                 <option value="1">Relaxing</option>
                 <option value="2">Adventure</option>
-            </select>
+            </select> -->
 
-
+<!-- 
             <h3><strong>Question 4</strong></h3>
             <h4>Do you enjoy traveling with others?</h4>
             <select data-placeholder="" class="chosen-select" id="q3">
                 <option value=""></option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
-            </select>
-
-            <h3><strong>Question 5</strong></h3>
-            <h4>Is adventurous food a priotity?</h4>
-            <select data-placeholder="" class="chosen-select" id="q3">
-                <option value=""></option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-            </select>
+            </select> -->
 
 
 
-            <h3><strong>Question 6</strong></h3>
+            <!-- <h3><strong>Question 6</strong></h3>
             <h4>Do you enjoy outdoor adventures? </h4>
             <select data-placeholder="" class="chosen-select" id="q5">
                 <option value=""></option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
-            </select>
+            </select> -->
 
-
-            <h3><strong>Question 7</strong></h3>
-            <h4>Would you enjoy learning about other cultures on vacations?</h4>
-            <select data-placeholder="" class="chosen-select" id="q6">
-                <option value=""></option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-
-            </select>
-
-
-            <h3><strong>Question 8</strong></h3>
-            <h4>What time of the year do you plan on traveling?</h4>
+            <p class="title is-3">Questions 2</p>
+            <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
             <select data-placeholder="" class="chosen-select" id="q7">
                 <option value=""></option>
                 <option value="1">Fall</option>
@@ -110,20 +97,62 @@
                 <option value="4">Summer</option>
             </select>
 
+        <br>
+        <br>
+        <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                    <span>Click me</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      Overview
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Modifiers
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Grid
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Form
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Elements
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Components
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Layout
+                    </a>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      More
+                    </a>
+                  </div>
+                </div>
+              </div>
+
 
             <br>
             <br>
 
 
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+            <button type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
                     aria-hidden="true"></i>
                 Submit</button>
 
             <hr>
             <footer class="footer">
-                <div class="container">
+                <!-- <div class="container">
                     <p><a href="#">API Friends List</a> | <a href="#"> GitHub Repo</a></p>
-                </div>
+                </div> -->
             </footer>
 
         </div>
@@ -150,6 +179,13 @@
 
             </div>
         </div>
+        <footer class="footer">
+                <div class="content has-text-centered">
+                  <p class ="title is-1 is-primary">
+                        &copy;RAFT
+                  </p>
+                </div>
+              </footer>
 
         <script type="text/javascript">
 
