@@ -6,8 +6,23 @@
       country: {
         type: DataTypes.STRING
       },
+      category: {
+        type: DataTypes.BOOLEAN
+      },
       bestSeason: {
         type: DataTypes.STRING
+      },
+      crowded: {
+        type: DataTypes.BOOLEAN
+      },
+      food: {
+        type: DataTypes.BOOLEAN
+      },
+      tourism: {
+        type: DataTypes.BOOLEAN
+      },
+      outdoor: {
+        type: DataTypes.BOOLEAN
       },
       climate: {
         type: DataTypes.STRING
