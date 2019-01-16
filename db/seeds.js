@@ -15,251 +15,140 @@ var reset = process.argv[2] === 'reset' ? { force: true } : {};
 db.sequelize.sync(reset).then(function () {
   //1
   db.Destination.create({
+    name: "China",
     country: "China",
     climate: "Temperate",
-    category: true,
     bestSeason: "Spring",
-    crowded: true,
-    food: true,
-    tourism: true,
-    outdoor: false,
-    museums: true
-  });  
+  });
   db.Destination.create({
+    name: "Japan",
     country: "Japan",
     climate: "Temperate",
-    category: true,
     bestSeason: "Spring",
-    crowded: true,
-    food: true,
-    tourism: true,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "USA",
     country: "USA",
     climate: "Sunny",
-    category: true,
     bestSeason: "Summer",
-    crowded: true,
-    food: false,
-    tourism: true,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "France",
     country: "France",
     climate: "Brisk",
-    category: true,
     bestSeason: "Fall",
-    crowded: true,
-    food: false,
-    tourism: true,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "England",
     country: "England",
     climate: "Brisk",
-    category: true,
     bestSeason: "Spring",
-    crowded: true,
-    food: false,
-    tourism: true,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "Italy",
     country: "Italy",
     climate: "Sunny",
-    category: true,
     bestSeason: "Summer",
-    crowded: true,
-    food: false,
-    tourism: true,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "New Zealand",
     country: "New Zealand",
     climate: "Brisk",
-    category: true,
     bestSeason: "Fall",
-    crowded: false,
-    food: false,
-    tourism: false,
-    outdoor: true,
-    museums: false
-  });  
+  });
   db.Destination.create({
+    name: "Thailand",
     country: "Thailand",
     climate: "Tropical",
-    category: true,
     bestSeason: "Spring",
-    crowded: false,
-    food: true,
-    tourism: false,
-    outdoor: true,
-    museums: false
   });
   db.Destination.create({
+    name: "UAE",
     country: "UAE",
     climate: "Sunny",
-    category: true,
     bestSeason: "Summer",
-    crowded: true,
-    food: true,
-    tourism: false,
-    outdoor: true,
-    museums: false
   });
   db.Destination.create({
+    name: "Spain",
     country: "Spain",
     climate: "Sunny",
-    category: true,
     bestSeason: "Summer",
-    crowded: true,
-    food: false,
-    tourism: true,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "Argentina",
     country: "Argentina",
     climate: "Sunny",
-    category: true,
     bestSeason: "Spring",
-    crowded: true,
-    food: false,
-    tourism: false,
-    outdoor: true,
-    museums: false
   });
   db.Destination.create({
+    name: "Brazil",
     country: "Brazil",
     climate: "Tropical",
-    category: true,
     bestSeason: "Summer",
-    crowded: true,
-    food: false,
-    tourism: false,
-    outdoor: true,
-    museums: false
   });
   db.Destination.create({
     country: "Greece",
     climate: "Sunny",
-    category: false,
     bestSeason: "Summer",
-    crowded: false,
-    food: false,
-    tourism: true,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "Australia",
     country: "Australia",
     climate: "Temperate",
-    category: true,
     bestSeason: "Fall",
-    crowded: true,
-    food: false,
-    tourism: false,
-    outdoor: true,
-    museums: false
   });
   db.Destination.create({
+    name: "Hong Kong",
     country: "Hong Kong",
     climate: "Temperate",
-    category: true,
     bestSeason: "Spring",
-    crowded: true,
-    food: true,
-    tourism: true,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "Costa Rica",
     country: "Costa Rica",
     climate: "Tropical",
-    category: true,
-    bestSeason: "Summer",
-    crowded: false,
-    food: true,
-    tourism: true,
-    outdoor: true,
-    museums: false
+    bestSeason: "Summer"
   });
   db.Destination.create({
+    name: "Maldives",
     country: "Maldives",
     climate: "Tropical",
-    category: true,
     bestSeason: "Summer",
-    crowded: false,
-    food: true,
-    tourism: true,
-    outdoor: true,
-    museums: false
   });
   db.Destination.create({
+    name: "Ireland",
     country: "Ireland",
     climate: "Snowy",
-    category: true,
     bestSeason: "Winter",
-    crowded: true,
-    food: false,
-    tourism: false,
-    outdoor: true,
-    museums: false
+
   });
   db.Destination.create({
+    name: "Egypt",
     country: "Egypt",
     climate: "Sunny",
-    category: true,
     bestSeason: "Summer",
-    crowded: true,
-    food: true,
-    tourism: true,
-    outdoor: true,
-    museums: true
   });
   db.Destination.create({
+    name: "South Africa",
     country: "South Africa",
     climate: "Temperate",
-    category: true,
     bestSeason: "Spring",
-    crowded: false,
-    food: true,
-    tourism: false,
-    outdoor: true,
-    museums: false
   });
   db.Destination.create({
+    name: "Germany",
     country: "Germany",
     climate: "Brisk",
-    category: true,
     bestSeason: "Fall",
-    crowded: true,
-    food: false,
-    tourism: false,
-    outdoor: false,
-    museums: true
   });
   db.Destination.create({
+    name: "Norway",
     country: "Norway",
     climate: "Snowy",
-    category: true,
     bestSeason: "Fall",
-    crowded: false,
-    food: false,
-    tourism: false,
-    outdoor: true,
-    museums: false
   });
-  app.listen(PORT, function() {
+  app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
 });
 
 
-  
