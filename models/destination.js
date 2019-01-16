@@ -21,12 +21,12 @@
       tourism: {
         type: DataTypes.BOOLEAN
       },
-      outdoor: {
+    /*  outdoor: {
         type: DataTypes.BOOLEAN
       },
       museums: {
         type: DataTypes.BOOLEAN
-      }
+      }*/
     });
 
     return Destination;
