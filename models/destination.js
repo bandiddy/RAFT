@@ -1,49 +1,25 @@
   module.exports = function(sequelize, DataTypes) {
     var Destination = sequelize.define("Destination", {
+      name: {
+        type: DataTypes.STRING
+      },
       country: {
         type: DataTypes.STRING
       },
-      weather: {
+      bestSeason: {
         type: DataTypes.STRING
-      },
-      style: {
-        type: DataTypes.STRING
-      },
-      crowded: {
-        type: DataTypes.BOOLEAN
-      },
-      category: {
-        type: DataTypes.STRING
-      },
-      outdoorActivities: {
-        type: DataTypes.BOOLEAN
-      },
-      developed: {
-        type: DataTypes.BOOLEAN
       },
       climate: {
         type: DataTypes.STRING
-      },
-      setting: {
-        type: DataTypes.BOOLEAN
-      },
-      crowds: {
-        type: DataTypes.BOOLEAN
-      },
-      food: {
-        type: DataTypes.BOOLEAN
-      },
-      tourism: {
-        type: DataTypes.BOOLEAN
-      },
-      outdoor: {
-        type: DataTypes.BOOLEAN
-      },
-      museums: {
-        type: DataTypes.BOOLEAN
       }
     });
-
+    Destination.associate = function(models) {
+      Destination.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
     return Destination;
   };
   

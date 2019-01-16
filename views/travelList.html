@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DestinationApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-controller="TravelListController">
+    <ul>
+        <li ng-repeat="destination in destinations">
+          <span>{{destination.name}}</span>
+        </li>
+    </ul>
+</body>
+</html>
