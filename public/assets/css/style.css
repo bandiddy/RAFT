@@ -4,6 +4,14 @@ body{
     font-family: 'Audiowide', cursive;
 }
 
-img {
-    margin-top: -10%;
+.raft {
+    margin-top: -8%;
+}
+.tree {
+    margin-top: -2%;
+}
+
+.hero.is-primary .subtitle, .hero.is-primary .title {
+    color: black;
+    margin-left: 5%;
 }
