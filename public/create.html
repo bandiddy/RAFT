@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="../public/assets/js/main.js"></script>
+    <script src="../public/assets/js/create.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
+    <link href="../public/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,16 +30,65 @@
             </div>
         </div>
     </section>
+    <p class="title is-1 is-center" id="title">Travel Questions</p>
+    <hr>
     <form class="data-input">
-        <h2></h2>
+
+         
+
+        <p class="title is-3">Question 1</p>
+        <p class="subtitle is-5">Where did you go?</p>
         <input class="input is-rounded" type="text" id="userInput" placeholder="Where have you been?">
+        <br>
+        <br>
+        
+        <p class="title is-3">Question 2</p>
+        <p class="subtitle is-5">What kind of climate did you experience at your destination?</p>
+        <br>
+        <div class="select is-primary is-medium is-rounded" id="q2">
+
+            <select>
+                <option value="1">Sunny</option>
+                <option value="2">Tropical</option>
+                <option value="3">Snowy</option>
+                <option value="4">Temperate</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        
+        <p class="title is-3">Question 3</p>
+        <p class="subtitle is-5">In your opinion what is the best time to travel to that destination?</p>
+        <div class="select is-primary is-medium is-rounded" id="q3">
+
+            <select>
+                <option value="1">Summer</option>
+                <option value="2">Fall</option>
+                <option value="3">Winter</option>
+                <option value="3">Spring</option>
+            </select>
+        </div>
+
+
+        <br>
+        <br>
+
         <div class="control">
             <button class="button is-primary is-rounded" type="submit" id="create-data">Submit</button>
             <button class="button is-light is-rounded" type="submit" id="create-data">Cancel</button>
         </div>
     </form>
+    <br>
+    <br>
     <span class="data-container">
     </span>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="title is-1 is-primary">
+                &copy;RAFT
+            </p>
+        </div>
+    </footer>
 
 </body>
 
