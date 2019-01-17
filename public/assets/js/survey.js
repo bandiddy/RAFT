@@ -25,7 +25,7 @@ $("#submit").on("click", function () {
     if (validateForm() == true) {
 
         var userData = {
-            name: $("#name").val(),
+            name: input,
             scores: [
                 $("#q1").val(),
                 $("#q2").val()
