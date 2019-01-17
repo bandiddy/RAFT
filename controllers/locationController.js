@@ -8,6 +8,9 @@ var db = require("../models");
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
+router.get("/members", function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/main.html'));
+});
 
 router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));

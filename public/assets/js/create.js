@@ -26,7 +26,7 @@ $(document).ready(function () {
                 bestSeason: $("#q3").val()
 
             }
-            $.ajax("/api/burgers", {
+            $.ajax("/api/locations/new", {
                 type: "POST",
                 data: userData
             }).then(
@@ -42,4 +42,4 @@ $(document).ready(function () {
 
         return false;
     });
-
+})
