@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="travelListApp">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,11 +10,14 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
     <script src="/assets/js/travelListApp.js"></script>
-    <script src="/assets/js/travelList.component.js"></script>
 </head>
 
-<body">
-    <travel-list></travel-list>
+<body>
+    <ul ng-app="tlApp" ng-controller="tlController">
+        <li ng-repeat="x in destinations">
+            {{x.name}}
+        </li>
+    </ul>
 </body>
 
 </html>

@@ -55,10 +55,7 @@ router.post("/api/locations/new", function(req, res) {
     db.Destination.create({
         name: req.body.name,
         country: req.body.country,
-<<<<<<< HEAD
-=======
         climate: req.body.climate,
->>>>>>> origin/kbranch
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
         id: req.user.id
@@ -79,7 +76,7 @@ router.get("/api/user_data", function (req, res) {
     }
     else {
         db.Destination.findAll({where: {id:req.user.id}}).then(function (results) {
-            res.send(results);
+            res.json(results);
         });
     }
 });
