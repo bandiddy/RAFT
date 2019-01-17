@@ -1,16 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="DestinationApp">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+    <script src="/assets/js/travelListApp.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
+    <link href="../public/assets/css/style.css" rel="stylesheet">
 </head>
-<body ng-controller="TravelListController">
-    <ul>
-        <li ng-repeat="destination in destinations">
-          <span>{{destination.name}}</span>
+
+<body>
+        <section class="hero is-primary is-bold">
+                <a class="navbar-brand" href="/logout">Logout</a>
+              <div class="hero-body">
+                <div class="container">
+                   
+                  <img class="tree" src="https://cdn3.iconfinder.com/data/icons/beach-icons/496/Palm_Trees-512.png" height="100"
+                    width="100" align="left" alt="">
+                  <h1 class="title">
+                    RAFT
+                  </h1>
+                  <h2 class="subtitle">
+                      Stop drowning, Start planning..
+                  </h2>
+                
+                  <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100" align="right"
+                    alt="">
+                </div>
+              </div>
+             
+            </section>
+          
+          
+            <h2>Welcome to the Life RAFT <span class="member-name"></span></h2>
+            
+            <a  href="/survey" class="button is-primary is-rounded">Grab our RAFT here</a>
+              <h2 class="subtitle">
+                  Have a unique travel experience that you want to share with us? Click down below to share your experience
+              </h2>
+              <a  href="/create" class="button is-primary is-rounded">Click Here</a>
+              <footer class="footer">
+                  <div class="content has-text-centered">
+                    <p class ="title is-1 is-primary">
+                          &copy;RAFT
+                    </p>
+                  </div>
+                </footer>
+          
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript" src="/assets/js/members.js"></script>
+          
+    <ul ng-app="tlApp" ng-controller="tlController">
+        <li ng-repeat="x in destinations">
+            {{x.name}}
         </li>
     </ul>
 </body>
+
 </html>

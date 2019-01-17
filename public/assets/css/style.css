@@ -2,7 +2,7 @@
 body, {
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
-    background-color: rgb(207, 10, 10);
+    background-color: rgb(221, 221, 221);
 }
 .main-container {
     background-color: rgb(221, 221, 221);
@@ -28,6 +28,9 @@ body, {
 }
 
 .footer {
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
+    color:black;
     background-color: white;
 }
 
@@ -41,11 +44,6 @@ body, {
 .navbar-brand{
     margin-left: 1%;
     
-}
-a:hover {
-
-    color: black;
-
 }
 
 .signup, .sign-header {
@@ -97,6 +95,7 @@ a:hover {
 #raft-create {
     margin-left:44.5%;
     margin-top: 2%;
+    margin-bottom: 8%;
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
     color:black;
