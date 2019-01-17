@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/bandiddy/RAFT#readme",
   "dependencies": {
+    "angular": "^1.7.5",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "bulma": "^0.7.2",
