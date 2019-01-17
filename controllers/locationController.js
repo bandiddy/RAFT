@@ -26,8 +26,12 @@ router.get("/survey", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, '../views/survey.html'));
 });
 
+router.get("/travelList", function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/travelList.html'));
+})
+
 router.post("/api/login", passport.authenticate("local"), function (req, res) {
-    res.json("/members");
+    res.json("/travelList");
 });
 
 router.post("/api/signup", function (req, res) {
@@ -56,6 +60,7 @@ router.post("/api/locations/new", function(req, res) {
         country: req.body.country,
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
+        climate: req.body.climate,
         id: req.user.id
         
     }).then(function (results) {
@@ -74,7 +79,7 @@ router.get("/api/user_data", function (req, res) {
     }
     else {
         db.Destination.findAll({where: {id:req.user.id}}).then(function (results) {
-            res.send(results);
+            res.json(results);
         });
     }
 });
