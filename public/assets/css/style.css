@@ -24,7 +24,7 @@ body{
     background-color: white;
 }
 
-#userInput {
+#userInput, #email-input, #password-input {
     width:30%;
 }
  
@@ -40,3 +40,10 @@ a:hover {
     color: black;
 
 }
+
+.signup, .sign-header {
+    font-size: 20px;
+    margin-left:3%;
+    margin-top: 1%;
+}
+

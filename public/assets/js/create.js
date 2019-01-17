@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(".data-input").on("submit", function (event) {
         event.preventDefault();
         console.log(input);
-        createNewRow();
+        console.log($("#q2").val());
         function validateForm() {
             var isValid = true;
             $('.form-control').each(function () {
