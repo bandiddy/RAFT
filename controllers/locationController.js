@@ -13,8 +13,14 @@ router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));
 });
 
-router.get("/members", isAuthenticated, function (req, res) {
+router.get("/main", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, '../views/members.html'));
+});
+router.get("/create", isAuthenticated, function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/create.html'));
+});
+router.get("/survey", isAuthenticated, function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/survey.html'));
 });
 
 router.post("/api/login", passport.authenticate("local"), function (req, res) {
