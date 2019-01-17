@@ -17,50 +17,57 @@
 </head>
 
 <body>
-        <section class="hero is-primary is-bold">
-                <a class="navbar-brand" href="/logout">Logout</a>
-              <div class="hero-body">
-                <div class="container">
-                   
-                  <img class="tree" src="https://cdn3.iconfinder.com/data/icons/beach-icons/496/Palm_Trees-512.png" height="100"
-                    width="100" align="left" alt="">
-                  <h1 class="title">
+    <section class="hero is-primary is-bold">
+        <a class="navbar-brand" href="/logout">Logout</a>
+        <div class="hero-body">
+            <div class="container">
+
+                <img class="tree" src="https://cdn3.iconfinder.com/data/icons/beach-icons/496/Palm_Trees-512.png"
+                    height="100" width="100" align="left" alt="">
+                <h1 class="title">
                     RAFT
-                  </h1>
-                  <h2 class="subtitle">
-                      Stop drowning, Start planning..
-                  </h2>
-                
-                  <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100" align="right"
-                    alt="">
-                </div>
-              </div>
-             
-            </section>
-          
-          
-            <h2>Welcome to the Life RAFT <span class="member-name"></span></h2>
-            
-            <a  href="/survey" class="button is-primary is-rounded">Grab our RAFT here</a>
-              <h2 class="subtitle">
-                  Have a unique travel experience that you want to share with us? Click down below to share your experience
-              </h2>
-              <a  href="/create" class="button is-primary is-rounded">Click Here</a>
-              <footer class="footer">
-                  <div class="content has-text-centered">
-                    <p class ="title is-1 is-primary">
-                          &copy;RAFT
-                    </p>
-                  </div>
-                </footer>
-          
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script type="text/javascript" src="/assets/js/members.js"></script>
-          
-    <ul ng-app="tlApp" ng-controller="tlController">
-        <li ng-repeat="x in destinations">
-            {{x.name}}
-        </li>
+                </h1>
+                <h2 class="subtitle">
+                    Stop drowning, Start planning..
+                </h2>
+
+                <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100"
+                    align="right" alt="">
+            </div>
+        </div>
+
+    </section>
+    <div class="container">
+            <h1 class="title is-1" id="title">Your Future Travel Destination</h1>
+            <h2 class="subtitle is 5" id="title">a raft has saved your travel planning</h2>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ul ng-app="tlApp" ng-controller="tlController">
+            <li ng-repeat="x in destinations">
+                {{x.name}}
+            </li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p class="title is-1 is-primary">
+                    &copy;RAFT
+                </p>
+            </div>
+    </div>
+    </section>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/members.js"></script>
     </ul>
 </body>
 
