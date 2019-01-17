@@ -1,0 +1,42 @@
+
+body{
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
+    background-color: rgb(212, 211, 211);
+}
+#title {
+  margin-top: 1%;
+}
+
+.raft {
+    margin-top: -8%;
+}
+.tree {
+    margin-top: -2%;
+}
+
+.hero.is-primary .subtitle, .hero.is-primary .title {
+    color: black;
+    margin-left: 5%;
+}
+
+.footer {
+    background-color: white;
+}
+
+#userInput {
+    width:30%;
+}
+ 
+.data-input {
+    margin-left:8%;
+}
+.navbar-brand{
+    margin-left: 1%;
+    
+}
+a:hover {
+
+    color: black;
+
+}

@@ -4,7 +4,9 @@
   "description": "The app that saves you from drowning in travel planning",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node db/seeds.js",
+    "reset": "node db/seeds.js reset"
   },
   "repository": {
     "type": "git",

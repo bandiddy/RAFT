@@ -13,8 +13,14 @@ router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));
 });
 
-router.get("/members", isAuthenticated, function (req, res) {
+router.get("/main", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, '../views/members.html'));
+});
+router.get("/create", isAuthenticated, function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/create.html'));
+});
+router.get("/survey", isAuthenticated, function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/survey.html'));
 });
 
 router.get("/travelList", function (req, res) {
@@ -49,6 +55,10 @@ router.post("/api/locations/new", function(req, res) {
     db.Destination.create({
         name: req.body.name,
         country: req.body.country,
+<<<<<<< HEAD
+=======
+        climate: req.body.climate,
+>>>>>>> origin/kbranch
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
         id: req.user.id
