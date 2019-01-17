@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(".data-input").on("submit", function (event) {
         event.preventDefault();
         console.log(input);
-        createNewRow();
+        console.log($("#q2").val());
         function validateForm() {
             var isValid = true;
             $('.form-control').each(function () {
@@ -21,12 +21,12 @@ $(document).ready(function () {
         if (validateForm() == true) {
 
             var userData = {
-                name: input.val().trim(),
+                name: input,
                 climate: $("#q2").val(),
                 bestSeason: $("#q3").val()
 
             }
-            $.ajax("/api/burgers", {
+            $.ajax("/api/locations/new", {
                 type: "POST",
                 data: userData
             }).then(
@@ -42,4 +42,5 @@ $(document).ready(function () {
 
         return false;
     });
+});
 
