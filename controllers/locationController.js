@@ -17,8 +17,12 @@ router.get("/members", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, '../views/members.html'));
 });
 
+router.get("/travelList", function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/travelList.html'));
+})
+
 router.post("/api/login", passport.authenticate("local"), function (req, res) {
-    res.json("/members");
+    res.json("/travelList");
 });
 
 router.post("/api/signup", function (req, res) {
@@ -43,15 +47,10 @@ router.get("/api/locations", function(req, res) {
 router.post("/api/locations/new", function(req, res) {
     console.log(req.body);
     db.Destination.create({
+        name: req.body.name,
         country: req.body.country,
-        climate: req.body.climate,
-        category: req.body.category,
-        crowded: req.body.crowded,
-        food: req.body.food,
-        tourism: req.body.tourism,
-        outdoor: req.body.outdoor,
-        museums: req.body.museums,
         bestSeason: req.body.bestSeason,
+        climate: req.body.climate,
         id: req.user.id
         
     }).then(function (results) {
