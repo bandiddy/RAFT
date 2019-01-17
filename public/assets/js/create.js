@@ -21,7 +21,7 @@ $(document).ready(function () {
         if (validateForm() == true) {
 
             var userData = {
-                name: input.val().trim(),
+                name: input,
                 climate: $("#q2").val(),
                 bestSeason: $("#q3").val()
 
