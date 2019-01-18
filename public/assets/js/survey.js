@@ -26,15 +26,14 @@ $("#submit").on("click", function () {
 
         var userData = {
             name: input,
-            scores: [
-                $("#q1").val(),
-                $("#q2").val()
-            ]
+            climate: $("#q1").val(),
+            bestSeason: $("#q2").val(),
+            
         }
 
 
 
-        $.post("/api/locations", userData).done(function (data) {
+        $.post("/api/locations/new", userData).done(function (data) {
 
             $("#matchLocation").text(data.name);
             $("#resultsModal").modal('toggle');
