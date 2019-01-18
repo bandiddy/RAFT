@@ -76,7 +76,7 @@ router.post("/api/locations/new", function(req, res) {
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
-        id: req.user.id
+        UserId: req.user.id
         
     }).then(function (results) {
         res.json(results);
@@ -94,6 +94,17 @@ router.get("/api/user_data", function (req, res) {
     }
     else {
         db.Destination.findAll({where: {id:req.user.id}}).then(function (results) {
+            res.json(results);
+        });
+    }
+});
+
+router.get("/api/userID", function (req, res) {
+    if (!req.user) {
+        res.json({});
+    }
+    else {
+        db.User.findAll({where: {id:req.user.id}}).then(function (results) {
             res.json(results);
         });
     }

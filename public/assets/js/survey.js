@@ -21,10 +21,9 @@ $("#submit").on("click", function () {
         var surveyData = {
             climate: $("#q1").val(),
             bestSeason: $("#q2").val()
-            
         }
 
-        $.ajax("/api/locations", {
+        $.ajax("/api/locations/new", {
             type: "POST",
             data: surveyData
         }).then(
