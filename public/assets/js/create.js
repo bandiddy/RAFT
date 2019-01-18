@@ -12,10 +12,10 @@ $(document).ready(function () {
         if (validateForm() == true) {
             var userData = {};
             $.get("/api/userID").then(function(req) {
-                userData.name = $('#userInput').val().trim();
+                userData.name = $('#countryInput').val().trim();
                 userData.UserId = req[0].id;
-                userData.climate = $("#q2").val();
-                userData.bestSeason = $("#q3").val();
+                userData.climate = $("#q3").val();
+                userData.bestSeason = $("#q4").val();
             }).then(function(req) {
                 console.log(userData);
                 $.post("/api/locations/new", userData).then(function(req) {
