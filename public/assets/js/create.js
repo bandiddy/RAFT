@@ -26,7 +26,6 @@ $(document).ready(function () {
         else {
             alert("Please fill out all fields before submitting!");
         }
-
         return false;
     });
 

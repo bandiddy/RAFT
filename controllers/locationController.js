@@ -43,11 +43,6 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-<<<<<<< HEAD
-router.get("/api/locations", function(req, res) {
-    db.Destination.findAll().then(function (results) {
-        res.json(results);
-=======
 router.post("/api/locations", function (req, res) {
 
     db.Destination.findOne({
@@ -61,7 +56,6 @@ router.post("/api/locations", function (req, res) {
         res.json({
             error: err
         });
->>>>>>> origin/kbranch
     });
 })
 
@@ -74,10 +68,6 @@ router.post("/api/locations/new", function (req, res) {
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
         UserId: req.user.id
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/kbranch
     }).then(function (results) {
         res.redirect("/travelList");
     });
@@ -93,11 +83,7 @@ router.get("/api/user_data", function (req, res) {
         res.json({});
     }
     else {
-<<<<<<< HEAD
         db.Destination.findAll({where: {UserId:req.user.id}}).then(function (results) {
-=======
-        db.Destination.findAll({ where: { id: req.user.id } }).then(function (results) {
->>>>>>> origin/kbranch
             res.json(results);
         });
     }
