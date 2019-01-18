@@ -6,10 +6,7 @@ $("#submit").on("click", function () {
     console.log($("#q1").val())
     function validateForm() {
         var isValid = true;
-        $('.form-control').each(function () {
-            if ($(this).val() === '')
-                isValid = false;
-        });
+
         $('.chosen-select').each(function () {
             if ($(this).val() === "")
                 isValid = false

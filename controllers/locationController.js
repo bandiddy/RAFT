@@ -8,10 +8,6 @@ var db = require("../models");
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
-router.get("/main", function (req, res) {
-    res.sendFile(path.join(__dirname, '../views/main.html'));
-});
-
 router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));
 });
@@ -31,7 +27,7 @@ router.get("/travelList", function (req, res) {
 })
 
 router.post("/api/login", passport.authenticate("local"), function (req, res) {
-    res.json("/travelList");
+    res.json("/main");
 });
 
 router.post("/api/signup", function (req, res) {
@@ -47,24 +43,9 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.post("/api/locations", function(req, res) {
+router.get("/api/locations", function(req, res) {
     db.Destination.findAll().then(function (results) {
         res.json(results);
-        var travelMatch = {
-            climate: "",
-            bestSeason: ""
-        };
-        var surveyData = req.body;
-        var travelClimate = surveyData.climate;
-        var travelSeason = surveyData.bestSeason;
-        
-        for (var i = 0; i < results.length; i++){
-            if(travelSeason || travelClimate === results[i].climate || results[i].bestSeason){
-                travelMatch.climate = results[i].climate;
-                travelMatch.bestSeason = results[i].bestSeason
-            }
-        }
-        res.json(travelMatch);
     });
 });
 
@@ -77,9 +58,8 @@ router.post("/api/locations/new", function(req, res) {
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
         UserId: req.user.id
-        
     }).then(function (results) {
-        res.json(results);
+        res.redirect("/travelList");
     });
 });
 
@@ -93,7 +73,7 @@ router.get("/api/user_data", function (req, res) {
         res.json({});
     }
     else {
-        db.Destination.findAll({where: {id:req.user.id}}).then(function (results) {
+        db.Destination.findAll({where: {UserId:req.user.id}}).then(function (results) {
             res.json(results);
         });
     }
