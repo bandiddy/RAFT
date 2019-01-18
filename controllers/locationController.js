@@ -8,7 +8,6 @@ var db = require("../models");
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
-
 router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));
 });
@@ -69,9 +68,8 @@ router.post("/api/locations/new", function (req, res) {
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
         UserId: req.user.id
-
     }).then(function (results) {
-        res.json(results);
+        res.redirect("/travelList");
     });
 });
 
@@ -85,7 +83,7 @@ router.get("/api/user_data", function (req, res) {
         res.json({});
     }
     else {
-        db.Destination.findAll({ where: { id: req.user.id } }).then(function (results) {
+        db.Destination.findAll({where: {UserId:req.user.id}}).then(function (results) {
             res.json(results);
         });
     }
