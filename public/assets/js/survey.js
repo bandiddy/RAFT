@@ -15,11 +15,9 @@ $("#submit").on("click", function () {
     }
     if (validateForm() == true) {
 
-        var userData = {
-            name: input,
+        var surveyData = {
             climate: $("#q1").val(),
-            bestSeason: $("#q2").val(),
-            
+            bestSeason: $("#q2").val()
         }
 
         $.post("/api/locations", surveyData).done (function(data){
