@@ -1,15 +1,9 @@
-var config = {
-    '.chosen-select': {},
-    '.chosen-select-deselect': { allow_single_deselect: true },
-    '.chosen-select-no-single': { disable_search_threshold: 8 },
-    '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
-    '.chosen-select-width': { width: "95%" }
-}
-for (var selector in config) {
-    $(selector).chosen(config[selector]);
-}
+$(document).ready(function(){
+
+
 
 $("#submit").on("click", function () {
+    console.log($("#q1").val())
     function validateForm() {
         var isValid = true;
         $('.form-control').each(function () {
@@ -24,25 +18,28 @@ $("#submit").on("click", function () {
     }
     if (validateForm() == true) {
 
-        var userData = {
-            name: input,
-            scores: [
-                $("#q1").val(),
-                $("#q2").val()
-            ]
+        var surveyData = {
+            climate: $("#q1").val(),
+            bestSeason: $("#q2").val()
+            
         }
 
-
-
-        $.post("/api/locations", userData).done(function (data) {
-
-            $("#matchLocation").text(data.name);
-            $("#resultsModal").modal('toggle');
-        });
+        $.ajax("/api/locations", {
+            type: "POST",
+            data: surveyData
+        }).then(
+            function (data) {
+                console.log("matching new location");
+                location.reload();
+                console.log(data);
+            }
+        );
     }
+
     else {
         alert("Please fill out all fields before submitting!");
     }
 
     return false;
-});
+  });
+})
