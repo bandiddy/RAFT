@@ -14,19 +14,21 @@ $("#submit").on("click", function () {
         return isValid;
     }
     if (validateForm() == true) {
-
-        var surveyData = {
-            climate: $("#q1").val(),
-            bestSeason: $("#q2").val()
-        }
-
+        
+        var surveyData = {};
+        $.get("/api/userID").then(function(req){
+            surveyData.UserId = req[0].id;
+            surveyData.climate = $("#q1").val();
+            surveyData.bestSeaon = $("#q3").val();
+        }).then(function(req){
+            console.log(surveyData);
         $.post("/api/locations", surveyData).done (function(data){
-           
-         
                 console.log("matching new location");
                 location.reload();
                 console.log(data);
             });
+        })
+
     }
 
     else {

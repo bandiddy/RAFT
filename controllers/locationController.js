@@ -47,28 +47,23 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.post("/api/locations", function(req, res) {
-    db.Destination.findAll().then(function (results) {
-        res.json(results);
-        var travelMatch = {
-            climate: "",
-            bestSeason: ""
-        };
-        var surveyData = req.body;
-        var travelClimate = surveyData.climate;
-        var travelSeason = surveyData.bestSeason;
-        
-        for (var i = 0; i < results.length; i++){
-            if(travelSeason || travelClimate === results[i].climate || results[i].bestSeason){
-                travelMatch.climate = results[i].climate;
-                travelMatch.bestSeason = results[i].bestSeason
-            }
-        }
-        res.json(travelMatch);
-    });
-});
+router.post("/api/locations", function (req, res) {
 
-router.post("/api/locations/new", function(req, res) {
+    db.Destination.findOne({
+        where: {
+            climate: req.body.climate,
+            bestSeason: req.body.bestSeason
+        }
+    }).then(function (results) {
+        res.json(results);
+    }).catch(function (err) {
+        res.json({
+            error: err
+        });
+    });
+})
+
+router.post("/api/locations/new", function (req, res) {
     console.log(req.body);
     db.Destination.create({
         name: req.body.name,
@@ -77,7 +72,7 @@ router.post("/api/locations/new", function(req, res) {
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
         UserId: req.user.id
-        
+
     }).then(function (results) {
         res.json(results);
     });
@@ -93,7 +88,7 @@ router.get("/api/user_data", function (req, res) {
         res.json({});
     }
     else {
-        db.Destination.findAll({where: {id:req.user.id}}).then(function (results) {
+        db.Destination.findAll({ where: { id: req.user.id } }).then(function (results) {
             res.json(results);
         });
     }
@@ -104,7 +99,7 @@ router.get("/api/userID", function (req, res) {
         res.json({});
     }
     else {
-        db.User.findAll({where: {id:req.user.id}}).then(function (results) {
+        db.User.findAll({ where: { id: req.user.id } }).then(function (results) {
             res.json(results);
         });
     }

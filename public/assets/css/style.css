@@ -4,9 +4,9 @@ body, {
     font-family: 'Audiowide', cursive;
     background-color: rgb(221, 221, 221);
 }
-#container {
-    background-color: rgb(221, 221, 221);
-    
+p {
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
 }
 #title {
     font-family: 'Shadows Into Light', cursive;
@@ -32,7 +32,8 @@ body, {
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
     color:black;
-    background-color: white;
+    background-color: rgb(192, 192, 192);
+    width:100%;
 }
 
 #userInput, #email-input, #password-input {
@@ -82,7 +83,7 @@ body, {
     font-family: 'Audiowide', cursive;
     color:black;
 }
-.main, p {
+.main {
     
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
@@ -118,6 +119,7 @@ body, {
     float: right;
     width: 25%;
     margin-left: 5%;
+    margin-top: -2%
 }
 #nameInput, #countryInput {
     width:30%;
