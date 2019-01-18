@@ -1,11 +1,14 @@
 $(document).ready(function () {
 
-    var input = $('#userInput').val().trim();
+    var nameInput = $('#nameInput').val().trim();
+    var countryInput = $('#countryInput').val().trim();
+    var climateInput = $("#q3").val()
+    var seasonInput = $("#q4").val()
 
-    $(".data-input").on("submit", function (event) {
+    $(".create-data").on("submit", function (event) {
         event.preventDefault();
-        console.log(input);
-        console.log($("#q2").val());
+        console.log(nameInput);
+        console.log($("#q3").val());
         function validateForm() {
             var isValid = true;
             $('.form-control').each(function () {
@@ -21,9 +24,10 @@ $(document).ready(function () {
         if (validateForm() == true) {
 
             var userData = {
-                name: input,
-                climate: $("#q2").val(),
-                bestSeason: $("#q3").val()
+                name: nameInput,
+                country: countryInput,
+                climate: climateInput,
+                bestSeason: seasonInput
 
             }
             $.ajax("/api/locations/new", {

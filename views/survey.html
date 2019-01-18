@@ -71,8 +71,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
             <p class="title is-3">Question 3</p>
             <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
             <div class="field">
@@ -86,8 +86,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
             <p class="title is-3">Question 4</p>
             <p class="subtitle is-5">Do you enjoy taveling with others?</p>
             <div class="field">
@@ -102,8 +102,8 @@
                 </div>
             </div>
         </div>
-       
-       
+
+
         <p class="title is-3">Question 5</p>
         <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
         <div class="field">
@@ -200,17 +200,17 @@
                 var userData = {
                     name: input,
                     climate: $("#q1").val(),
-                    bestSeason: $("#q2").val(),
-
+                    bestSeason: $("q2").val()
                 }
-
-
-
-                $.post("/locations/new", userData).done(function (data) {
-
-                    $("#matchName").text(data.name);
-                    $("#resultsModal").modal('toggle');
-                });
+                $.ajax("/api/locations/new", {
+                    type: "POST",
+                    data: userData
+                }).then(
+                    function () {
+                        console.log("location added");
+                        location.reload();
+                    }
+                );
             }
             else {
                 alert("Please fill out all fields before submitting!");
