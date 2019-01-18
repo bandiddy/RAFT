@@ -73,11 +73,7 @@ router.post("/api/locations/new", function(req, res) {
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
-<<<<<<< HEAD
-        UserId: req.user.id
-=======
         userId: req.user.id
->>>>>>> 36f3b2d7eb184d82bdee2879dd48068d0aece1e3
         
     }).then(function (results) {
         res.json(results);
