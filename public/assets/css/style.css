@@ -43,6 +43,8 @@ body, {
 }
 .navbar-brand{
     margin-left: 1%;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
     
 }
 
@@ -51,9 +53,16 @@ body, {
     margin-left:3%;
     margin-top: 1%;
 }
+
+#title, #subtitle {
+    text-align: center;
+
+}
+
 .carousel-control-next-icon {
     color:white;
 }
+
 .carousel img {
     max-height: 600px;
     max-width: 1000px;
@@ -72,7 +81,7 @@ body, {
     font-family: 'Audiowide', cursive;
     color:black;
 }
-.main {
+.main, p {
     
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
@@ -86,7 +95,7 @@ body, {
     color:black;
 }
 .subtitle {
-    font-size: 30px;
+    
     margin-top: 2%;
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
@@ -99,4 +108,13 @@ body, {
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
     color:black;
+}
+.shark {
+    margin-top: -2%;
+    float: right;
+}
+.team {
+    float: right;
+    width: 25%;
+    margin-left: 5%;
 }
