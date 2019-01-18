@@ -49,7 +49,7 @@ body, {
     
 }
 
-.signup, .sign-header {
+.signup, .login, .sign-header {
     font-size: 20px;
     margin-left:3%;
     margin-top: 1%;
