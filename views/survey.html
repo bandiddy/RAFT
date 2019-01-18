@@ -30,16 +30,11 @@
         </div>
     </section>
             <p class="title is-1 is-center">Travel Questions</p>
-<<<<<<< HEAD:public/survey.html
-
-            <hr>
-=======
 
             <hr>
 
 
 
->>>>>>> 7afbddd9a0e126d868876461fdd4ae6bc8411db1:views/survey.html
             <p class="title is-3">Question 1</p>
             <p class="subtitle is-5">What kind of climate do you enjoy?</p>
             <div class="field">
@@ -88,23 +83,6 @@
             </select> -->
             <p class="title is-3">Question 2</p>
             <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
-<<<<<<< HEAD:public/survey.html
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q1">
-                            <option value=""></option>
-                            <option value="1">Fall</option>
-                            <option value="2">Winter</option>
-                            <option value="3">Spring</option>
-                            <option value="4">Summer</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-
-=======
             <select data-placeholder="" class="chosen-select" id="q7">
                 <option value=""></option>
                 <option value="1">Fall</option>
@@ -154,7 +132,6 @@
                     </div>
                 </div>
             </div>
->>>>>>> 7afbddd9a0e126d868876461fdd4ae6bc8411db1:views/survey.html
 
 
             <br>
@@ -203,67 +180,6 @@
                 </p>
             </div>
         </footer>
-
-        <script type="text/javascript">
-
-            var config = {
-                '.chosen-select': {},
-                '.chosen-select-deselect': { allow_single_deselect: true },
-                '.chosen-select-no-single': { disable_search_threshold: 8 },
-                '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
-                '.chosen-select-width': { width: "95%" }
-            }
-            for (var selector in config) {
-                $(selector).chosen(config[selector]);
-            }
-
-            $("#submit").on("click", function () {
-                function validateForm() {
-                    var isValid = true;
-                    $('.form-control').each(function () {
-                        if ($(this).val() === '')
-                            isValid = false;
-                    });
-                    $('.chosen-select').each(function () {
-                        if ($(this).val() === "")
-                            isValid = false
-                    })
-                    return isValid;
-                }
-                if (validateForm() == true) {
-
-                    var userData = {
-                        name: $("#name").val(),
-                        scores: [
-                            $("#q1").val(),
-                            $("#q2").val(),
-                            $("#q3").val(),
-                            $("#q4").val(),
-                            $("#q5").val(),
-                            $("#q6").val(),
-                            $("#q7").val(),
-                            $("#q8").val()
-                        ]
-                    }
-
-
-
-                    $.post("/api/friends", userData).done(function (data) {
-
-                        $("#matchName").text(data.name);
-                        $("#resultsModal").modal('toggle');
-                    });
-                }
-                else {
-                    alert("Please fill out all fields before submitting!");
-                }
-
-                return false;
-            });
-
-        </script>
-
-
 </body>
 
 </html>
