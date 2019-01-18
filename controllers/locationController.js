@@ -8,13 +8,16 @@ var db = require("../models");
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
+router.get("/main", function (req, res) {
+    res.sendFile(path.join(__dirname, '../views/main.html'));
+});
 
 router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));
 });
 
 router.get("/main", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, '../views/members.html'));
+    res.sendFile(path.join(__dirname, '../views/main.html'));
 });
 router.get("/create", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, '../views/create.html'));
@@ -44,9 +47,24 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.get("/api/locations", function(req, res) {
+router.post("/api/locations", function(req, res) {
     db.Destination.findAll().then(function (results) {
         res.json(results);
+        var travelMatch = {
+            climate: "",
+            bestSeason: ""
+        };
+        var surveyData = req.body;
+        var travelClimate = surveyData.climate;
+        var travelSeason = surveyData.bestSeason;
+        
+        for (var i = 0; i < results.length; i++){
+            if(travelSeason || travelClimate === results[i].climate || results[i].bestSeason){
+                travelMatch.climate = results[i].climate;
+                travelMatch.bestSeason = results[i].bestSeason
+            }
+        }
+        res.json(travelMatch);
     });
 });
 
