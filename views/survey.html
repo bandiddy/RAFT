@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Survey Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
     <link href="../public/assets/css/style.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -30,7 +32,7 @@
             </div>
         </div>
     </section>
-<br>
+    <br>
 
     <div class="container">
         <div>
@@ -76,7 +78,7 @@
 
 
 
-            <!-- <h3><strong>Question 6</strong></h3>
+            <!-- <h3><strong>Question 5</strong></h3>
             <h4>Do you enjoy outdoor adventures? </h4>
             <select data-placeholder="" class="chosen-select" id="q5">
                 <option value=""></option>
@@ -98,6 +100,44 @@
                     </div>
                 </div>
             </div>
+            <p class="title is-3">Question 3</p>
+            <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
+            <div class="field">
+                <div class="control">
+                    <div class="select is-primary is-medium is-rounded">
+                        <select data-placeholder="" class="chosen-select" id="q1">
+                            <option value="1">Relaxing</option>
+                            <option value="2">Adventure</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <p class="title is-3">Question 4</p>
+            <p class="subtitle is-5">Do you enjoy taveling with others?</p>
+            <div class="field">
+                <div class="control">
+                    <div class="select is-primary is-medium is-rounded">
+                        <select data-placeholder="" class="chosen-select" id="q1">
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="title is-3">Question 5</p>
+        <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
+        <div class="field">
+            <div class="control">
+                <div class="select is-primary is-medium is-rounded">
+                    <select data-placeholder="" class="chosen-select" id="q1">
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
 
 
 
@@ -106,7 +146,7 @@
             <br>
 
 
-            <button  href ="/travelList" type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
+            <button href="/travelList" type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
                     aria-hidden="true"></i>
                 Submit</button>
 
@@ -149,7 +189,7 @@
             </div>
         </footer>
 
-        <!-- <script type="text/javascript">
+        <script type="text/javascript">
 
             var config = {
                 '.chosen-select': {},
@@ -158,11 +198,11 @@
                 '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
                 '.chosen-select-width': { width: "95%" }
             }
-            for (var selector in config) {
-                $(selector).chosen(config[selector]);
-            }
-
+           // for (var selector in config) {
+               // $(selector).chosen(config[selector]);
+           // }
             $("#submit").on("click", function () {
+                console.log("you suck")
                 function validateForm() {
                     var isValid = true;
                     $('.form-control').each(function () {
@@ -193,7 +233,7 @@
 
 
 
-                    $.post("/api/friends", userData).done(function (data) {
+                    $.post("/travelList", userData).done(function (data) {
 
                         $("#matchName").text(data.name);
                         $("#resultsModal").modal('toggle');
@@ -206,7 +246,7 @@
                 return false;
             });
 
-        </script> -->
+        </script>
 
 
 </body>
