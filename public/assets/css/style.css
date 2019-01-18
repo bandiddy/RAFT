@@ -4,8 +4,9 @@ body, {
     font-family: 'Audiowide', cursive;
     background-color: rgb(221, 221, 221);
 }
-.main-container {
+#container {
     background-color: rgb(221, 221, 221);
+    
 }
 #title {
     font-family: 'Shadows Into Light', cursive;
@@ -43,10 +44,12 @@ body, {
 }
 .navbar-brand{
     margin-left: 1%;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
     
 }
 
-.signup, .sign-header {
+.signup, .login, .sign-header {
     font-size: 20px;
     margin-left:3%;
     margin-top: 1%;
@@ -79,7 +82,7 @@ body, {
     font-family: 'Audiowide', cursive;
     color:black;
 }
-.main {
+.main, p {
     
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
@@ -93,7 +96,7 @@ body, {
     color:black;
 }
 .subtitle {
-    font-size: 30px;
+    
     margin-top: 2%;
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
@@ -106,4 +109,16 @@ body, {
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
     color:black;
+}
+.shark {
+    margin-top: -2%;
+    float: right;
+}
+.team {
+    float: right;
+    width: 25%;
+    margin-left: 5%;
+}
+#nameInput, #countryInput {
+    width:30%;
 }

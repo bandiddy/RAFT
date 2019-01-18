@@ -1,20 +1,8 @@
 $(document).ready(function () {
-
-    var nameInput = $('#nameInput').val().trim();
-    var countryInput = $('#countryInput').val().trim();
-    var climateInput = $("#q3").val()
-    var seasonInput = $("#q4").val()
-
-    $(".create-data").on("submit", function (event) {
+    $(".data-input").on("submit", function (event) {
         event.preventDefault();
-        console.log(nameInput);
-        console.log($("#q3").val());
         function validateForm() {
             var isValid = true;
-            $('.form-control').each(function () {
-                if ($(this).val() === '')
-                    isValid = false;
-            });
             $('.chosen-select').each(function () {
                 if ($(this).val() === "")
                     isValid = false
@@ -22,23 +10,18 @@ $(document).ready(function () {
             return isValid;
         }
         if (validateForm() == true) {
-
-            var userData = {
-                name: nameInput,
-                country: countryInput,
-                climate: climateInput,
-                bestSeason: seasonInput
-
-            }
-            $.ajax("/api/locations/new", {
-                type: "POST",
-                data: userData
-            }).then(
-                function () {
-                    console.log("created new location");
-                    location.reload();
-                }
-            );
+            var userData = {};
+            $.get("/api/userID").then(function(req) {
+                userData.name = $('#userInput').val().trim();
+                userData.UserId = req[0].id;
+                userData.climate = $("#q2").val();
+                userData.bestSeason = $("#q3").val();
+            }).then(function(req) {
+                console.log(userData);
+                $.post("/api/locations/new", userData).then(function(req) {
+                    console.log("done");
+                });
+            });
         }
         else {
             alert("Please fill out all fields before submitting!");
