@@ -1,17 +1,14 @@
 $(document).ready(function () {
 
     var input = $('#userInput').val().trim();
-
-    $(".data-input").on("submit", function (event) {
+    
+    $("#sbumit").on("click", function (event) {
         event.preventDefault();
         console.log(input);
         console.log($("#q2").val());
         function validateForm() {
             var isValid = true;
-            $('.form-control').each(function () {
-                if ($(this).val() === '')
-                    isValid = false;
-            });
+          
             $('.chosen-select').each(function () {
                 if ($(this).val() === "")
                     isValid = false
