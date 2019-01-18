@@ -8,9 +8,6 @@ var db = require("../models");
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
-router.get("/main", function (req, res) {
-    res.sendFile(path.join(__dirname, '../views/main.html'));
-});
 
 router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));
@@ -76,7 +73,11 @@ router.post("/api/locations/new", function(req, res) {
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
         climate: req.body.climate,
+<<<<<<< HEAD
         UserId: req.user.id
+=======
+        userId: req.user.id
+>>>>>>> 36f3b2d7eb184d82bdee2879dd48068d0aece1e3
         
     }).then(function (results) {
         res.json(results);
