@@ -74,8 +74,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
             <p class="title is-3">Question 3</p>
             <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
             <div class="field">
@@ -89,8 +89,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
             <p class="title is-3">Question 4</p>
             <p class="subtitle is-5">Do you enjoy taveling with others?</p>
             <div class="field">
@@ -105,8 +105,8 @@
                 </div>
             </div>
         </div>
-       
-       
+
+
         <p class="title is-3">Question 5</p>
         <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
         <div class="field">
@@ -212,6 +212,70 @@
               </footer>
             
 
+<<<<<<< HEAD
+=======
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="title is-1 is-primary">
+                &copy;RAFT
+            </p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+
+        var config = {
+            '.chosen-select': {},
+            '.chosen-select-deselect': { allow_single_deselect: true },
+            '.chosen-select-no-single': { disable_search_threshold: 8 },
+            '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+            '.chosen-select-width': { width: "95%" }
+        }
+        // for (var selector in config) {
+        // $(selector).chosen(config[selector]);
+        // }
+        $("#submit").on("click", function () {
+            console.log("you suck")
+            function validateForm() {
+                var isValid = true;
+                $('.form-control').each(function () {
+                    if ($(this).val() === '')
+                        isValid = false;
+                });
+                $('.chosen-select').each(function () {
+                    if ($(this).val() === "")
+                        isValid = false
+                })
+                return isValid;
+            }
+            if (validateForm() == true) {
+
+                var userData = {
+                    name: input,
+                    climate: $("#q1").val(),
+                    bestSeason: $("q2").val()
+                }
+                $.ajax("/api/locations/new", {
+                    type: "POST",
+                    data: userData
+                }).then(
+                    function () {
+                        console.log("location added");
+                        location.reload();
+                    }
+                );
+            }
+            else {
+                alert("Please fill out all fields before submitting!");
+            }
+
+            return false;
+        });
+
+    </script>
+>>>>>>> e464d9617a0fa3bbe79c97441b297a2e1b38ba9e
 
 
 </body>
