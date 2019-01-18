@@ -26,15 +26,13 @@ $(document).ready(function () {
                 bestSeason: $("#q3").val()
 
             }
-            $.ajax("/api/locations/new", {
-                type: "POST",
-                data: userData
-            }).then(
-                function () {
-                    console.log("created new location");
-                    location.reload();
-                }
-            );
+            $.post("/api/locations/new", userData).done(function(data){
+                console.log(data);
+                console.log("created new location");
+                location.reload();
+            });
+                
+            
         }
         else {
             alert("Please fill out all fields before submitting!");

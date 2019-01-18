@@ -6,11 +6,8 @@ $("#submit").on("click", function () {
     console.log($("#q1").val())
     function validateForm() {
         var isValid = true;
-        $('.form-control').each(function () {
-            if ($(this).val() === '')
-                isValid = false;
-        });
-        $('.chosen-select').each(function () {
+     
+      $('.chosen-select').each(function () {
             if ($(this).val() === "")
                 isValid = false
         })
@@ -24,16 +21,13 @@ $("#submit").on("click", function () {
             
         }
 
-        $.ajax("/api/locations", {
-            type: "POST",
-            data: surveyData
-        }).then(
-            function (data) {
+        $.post("/api/locations", surveyData).done (function(data){
+           
+         
                 console.log("matching new location");
                 location.reload();
                 console.log(data);
-            }
-        );
+            });
     }
 
     else {
