@@ -8,16 +8,13 @@ var db = require("../models");
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
-router.get("/members", function (req, res) {
-    res.sendFile(path.join(__dirname, '../views/main.html'));
-});
 
 router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));
 });
 
 router.get("/main", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, '../views/members.html'));
+    res.sendFile(path.join(__dirname, '../views/main.html'));
 });
 router.get("/create", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, '../views/create.html'));
@@ -31,7 +28,7 @@ router.get("/travelList", function (req, res) {
 })
 
 router.post("/api/login", passport.authenticate("local"), function (req, res) {
-    res.json("/members");
+    res.json("/main");
 });
 
 router.post("/api/signup", function (req, res) {
