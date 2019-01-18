@@ -242,57 +242,7 @@
 
 
 
-    <script type="text/javascript">
-
-        var config = {
-            '.chosen-select': {},
-            '.chosen-select-deselect': { allow_single_deselect: true },
-            '.chosen-select-no-single': { disable_search_threshold: 8 },
-            '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
-            '.chosen-select-width': { width: "95%" }
-        }
-        // for (var selector in config) {
-        // $(selector).chosen(config[selector]);
-        // }
-        $("#submit").on("click", function () {
-            console.log("you suck")
-            function validateForm() {
-                var isValid = true;
-                $('.form-control').each(function () {
-                    if ($(this).val() === '')
-                        isValid = false;
-                });
-                $('.chosen-select').each(function () {
-                    if ($(this).val() === "")
-                        isValid = false
-                })
-                return isValid;
-            }
-            if (validateForm() == true) {
-
-                var userData = {
-                    name: input,
-                    climate: $("#q1").val(),
-                    bestSeason: $("q2").val()
-                }
-                $.ajax("/api/locations/new", {
-                    type: "POST",
-                    data: userData
-                }).then(
-                    function () {
-                        console.log("location added");
-                        location.reload();
-                    }
-                );
-            }
-            else {
-                alert("Please fill out all fields before submitting!");
-            }
-
-            return false;
-        });
-
-    </script>
+    
 
 
 </body>
