@@ -5,11 +5,12 @@
   <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/assets/css/style.css" type="text/css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
-  <link href="/assets/css/style.css" type="text/css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
       </div>
     </div>
   </section>
-  <div class="main-container">
+  <div class="container" id="container">
     <h2 class="sign-header">Sign Up Form</h2>
     <form class="signup">
       <div class="field">
@@ -53,17 +54,20 @@
       </div>
       <div class="field">
         <p class="control">
-          <button class="button is-primary is-rounded" type="submit">
-            Login
-          </button>
+            <div class="field">
+                <p class="control">
+                  <button class="button is-primary is-rounded" type="submit">
+                    Sign Up
+                  </button>
         </p>
       </div>
     </form>
     <br />
     <p>Or log in <a href="/">here</a></p>
-  </div>
+  
+  
   <footer class="footer">
-    <div class="team">
+      <div class="team">
       <h3>TEAM TIGER SHARKS</h3>
       <ul>
         <li>Alvin Joesph</li>
@@ -71,19 +75,17 @@
         <li>Kelan Moffatt</li>
         <li>Calum Ragan</li>
       </ul>
+      
+      </div>
+      
+      <div class="content has-text-centered">
+          <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
+        <p class="title is-1 is-primary">
+          &copy;RAFT
+        </p>
+      </div>
+    </footer>
     </div>
-    <div class="content has-text-centered">
-      <img class="shark" src="../public/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
-      <p class="title is-1 is-primary">
-        &copy;RAFT
-        <div class="field">
-          <p class="control">
-            <button class="button is-primary is-rounded" type="submit">
-              Sign Up
-            </button>
-          </p>
-        </div>
-  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="/assets/js/signup.js"></script>
 </body>

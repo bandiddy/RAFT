@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Survey Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
-    <link href="../public/assets/css/style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <link href="../public/assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -32,7 +33,8 @@
         </div>
     </section>
     <br>
-    <div class="container">
+
+    <div class="container" id="container">
         <div>
             <p class="title is-1 is-center">Travel Questions</p>
             <hr>
@@ -51,30 +53,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <h3><strong>Question 3</strong></h3>
-            <h4>What kind of travel setting do you enjoy?</h4>
-            <select data-placeholder="" class="chosen-select" id="q2">
-                <option value=""></option>
-                <option value="1">Relaxing</option>
-                <option value="2">Adventure</option>
-            </select> -->
-
-            <!-- 
-            <h3><strong>Question 4</strong></h3>
-            <h4>Do you enjoy traveling with others?</h4>
-            <select data-placeholder="" class="chosen-select" id="q3">
-                <option value=""></option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-            </select> -->
-
-            <!-- <h3><strong>Question 6</strong></h3>
-            <h4>Do you enjoy outdoor adventures? </h4>
-            <select data-placeholder="" class="chosen-select" id="q5">
-                <option value=""></option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-            </select> -->
             <p class="title is-3">Question 2</p>
             <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
             <div class="field">
@@ -82,55 +60,204 @@
                     <div class="select is-primary is-medium is-rounded">
                         <select data-placeholder="" class="chosen-select" id="q2">
                             <option value=""></option>
-                            <option value="1">Fall</option>
-                            <option value="2">Winter</option>
-                            <option value="3">Spring</option>
-                            <option value="4">Summer</option>
+                            <option value="Fall">Fall</option>
+                            <option value="Winter">Winter</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Summer">Summer</option>
                         </select>
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <button type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
-                    aria-hidden="true"></i>
-                Submit</button>
-        </div>
-        <div id="resultsModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h2 class="modal-title"><strong>Best Match</strong></h2>
+
+
+            <p class="title is-3">Question 3</p>
+            <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
+            <div class="field">
+                <div class="control">
+                    <div class="select is-primary is-medium is-rounded">
+                        <select data-placeholder="" class="chosen-select" id="q3">
+                            <option value=""></option>
+                            <option value="1">Relaxing</option>
+                            <option value="2">Adventure</option>
+                        </select>
                     </div>
-                    <div class="modal-body">
-                        <h2 id="matchName"></h2>
-                        <img id="matchImg" src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg"
-                            alt="">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+
+            <p class="title is-3">Question 4</p>
+            <p class="subtitle is-5">Do you enjoy taveling with others?</p>
+            <div class="field">
+                <div class="control">
+                    <div class="select is-primary is-medium is-rounded">
+                        <select data-placeholder="" class="chosen-select" id="q4">
+                            <option value=""></option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer">
+
+
+        <p class="title is-3">Question 5</p>
+        <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
+        <div class="field">
+            <div class="control">
+                <div class="select is-primary is-medium is-rounded">
+                    <select data-placeholder="" class="chosen-select" id="q5">
+                        <option value=""></option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <p class="title is-3">Question 6</p>
+        <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
+        <div class="field">
+            <div class="control">
+                <div class="select is-primary is-medium is-rounded">
+                    <select data-placeholder="" class="chosen-select" id="q5">
+                        <option value=""></option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <p class="title is-3">Question 7</p>
+        <p class="subtitle is-5">Would you like to take palate on an adventure?</p>
+        <div class="field">
+            <div class="control">
+                <div class="select is-primary is-medium is-rounded">
+                    <select data-placeholder="" class="chosen-select" id="q6">
+                        <option value=""></option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <p class="title is-3">Question 8</p>
+        <p class="subtitle is-5">Would learning history about your destination be a priority on vacation?</p>
+        <div class="field">
+            <div class="control">
+                <div class="select is-primary is-medium is-rounded">
+                    <select data-placeholder="" class="chosen-select" id="q5">
+                        <option value=""></option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <p class="title is-3">Question 9</p>
+        <p class="subtitle is-5">What form of travel would you enjoy most?</p>
+        <div class="field">
+            <div class="control">
+                <div class="select is-primary is-medium is-rounded">
+                    <select data-placeholder="" class="chosen-select" id="q5">
+                        <option value=""></option>
+                        <option value="1">Drive</option>
+                        <option value="2">Train</option>
+                        <option value="1">Sail</option>
+                        <option value="2">Fly</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <br>
+        <br>
+
+
+        <button href="/travelList" type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
+                aria-hidden="true"></i>
+            Submit</button>
+
+        <hr>
+
+    </div>
+    <footer class="footer">
             <div class="team">
-                <h3>TEAM TIGER SHARKS</h3>
-                <ul>
-                    <li>Alvin Joseph</li>
-                    <li>James Cho</li>
-                    <li>Kelan Moffatt</li>
-                    <li>Calum Ragan</li>
-                </ul>
+            <h3>TEAM TIGER SHARKS</h3>
+            <ul>
+              <li>Alvin Joesph</li>
+              <li>James Cho</li>
+              <li>Kelan Moffatt</li>
+              <li>Calum Ragan</li>
+            </ul>
+            
             </div>
+            
             <div class="content has-text-centered">
-                <img class="shark" src="../public/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
-                <p class="title is-1 is-primary">
-                    &copy;RAFT
-                </p>
+                <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
+              <p class="title is-1 is-primary">
+                &copy;RAFT
+              </p>
             </div>
-        </footer>
+          </footer>
+
+
+
+    <script type="text/javascript">
+
+        var config = {
+            '.chosen-select': {},
+            '.chosen-select-deselect': { allow_single_deselect: true },
+            '.chosen-select-no-single': { disable_search_threshold: 8 },
+            '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+            '.chosen-select-width': { width: "95%" }
+        }
+        // for (var selector in config) {
+        // $(selector).chosen(config[selector]);
+        // }
+        $("#submit").on("click", function () {
+            console.log("you suck")
+            function validateForm() {
+                var isValid = true;
+                $('.form-control').each(function () {
+                    if ($(this).val() === '')
+                        isValid = false;
+                });
+                $('.chosen-select').each(function () {
+                    if ($(this).val() === "")
+                        isValid = false
+                })
+                return isValid;
+            }
+            if (validateForm() == true) {
+
+                var userData = {
+                    name: input,
+                    climate: $("#q1").val(),
+                    bestSeason: $("q2").val()
+                }
+                $.ajax("/api/locations/new", {
+                    type: "POST",
+                    data: userData
+                }).then(
+                    function () {
+                        console.log("location added");
+                        location.reload();
+                    }
+                );
+            }
+            else {
+                alert("Please fill out all fields before submitting!");
+            }
+
+            return false;
+        });
+
+    </script>
+
+
 </body>
 
 </html>
