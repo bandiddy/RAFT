@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
-  signUpForm.on("submit", function(event) {
+  signUpForm.on("submit", function (event) {
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
@@ -20,7 +20,7 @@ $(document).ready(function() {
     $.post("/api/signup", {
       email: email,
       password: password
-    }).then(function(data) {
+    }).then(function (data) {
       window.location.replace(data);
     }).catch(handleLoginErr);
   }

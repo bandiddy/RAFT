@@ -43,7 +43,6 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-
 router.post("/api/locations", function (req, res) {
     db.Destination.findOne({
         where: {
@@ -59,7 +58,6 @@ router.post("/api/locations", function (req, res) {
     });
 });
 
-
 router.post("/api/locations/new", function (req, res) {
     console.log(req.body);
     db.Destination.create({
@@ -67,20 +65,20 @@ router.post("/api/locations/new", function (req, res) {
         country: req.body.country,
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
-       
+
         UserId: req.user.id
     }).then(function (results) {
         res.redirect("/travelList");
     });
 });
 
-router.delete("/api/travelList/:id", function(req, res){
-    db.Destination.destroy({ 
+router.delete("/api/travelList/:id", function (req, res) {
+    db.Destination.destroy({
         where: {
-        id: req.params.id
-      }
-    }).then(function(results) {
-      res.json(results);
+            id: req.params.id
+        }
+    }).then(function (results) {
+        res.json(results);
     });
 });
 
@@ -94,7 +92,7 @@ router.get("/api/user_data", function (req, res) {
         res.json({});
     }
     else {
-        db.Destination.findAll({where: {UserId:req.user.id}}).then(function (results) {
+        db.Destination.findAll({ where: { UserId: req.user.id } }).then(function (results) {
             res.json(results);
         });
     }
@@ -111,14 +109,12 @@ router.get("/api/userID", function (req, res) {
     }
 });
 
-router.delete("/api/locations/:id", function(req, res) {
+router.delete("/api/locations/:id", function (req, res) {
     db.Destination.destroy({
-      where: {
-        id: req.params.id
-      }
+        where: {
+            id: req.params.id
+        }
     })
-  });
-
-
+});
 
 module.exports = router;
