@@ -47,7 +47,7 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.post("/api/locations", function (req, res) {
+router.get("/api/locations", function (req, res) {
 
     db.Destination.findAll({
         where: {
@@ -56,12 +56,14 @@ router.post("/api/locations", function (req, res) {
         }
     }).then(function (results) {
         res.json(results);
+        res.json(db.Destination)
     }).catch(function (err) {
         res.json({
             error: err
         });
     });
 })
+
 
 router.post("/api/locations/new", function (req, res) {
     console.log(req.body);

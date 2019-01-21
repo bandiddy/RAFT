@@ -106,7 +106,6 @@
             </div>
         </div>
 
-
         <p class="title is-3">Question 5</p>
         <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
         <div class="field">
@@ -121,19 +120,6 @@
             </div>
         </div>
         <p class="title is-3">Question 6</p>
-        <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
-        <div class="field">
-            <div class="control">
-                <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q5">
-                        <option value=""></option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <p class="title is-3">Question 7</p>
         <p class="subtitle is-5">Would you like to take palate on an adventure?</p>
         <div class="field">
             <div class="control">
@@ -146,12 +132,12 @@
                 </div>
             </div>
         </div>
-        <p class="title is-3">Question 8</p>
+        <p class="title is-3">Question 7</p>
         <p class="subtitle is-5">Would learning history about your destination be a priority on vacation?</p>
         <div class="field">
             <div class="control">
                 <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q5">
+                    <select data-placeholder="" class="chosen-select" id="q7">
                         <option value=""></option>
                         <option value="1">Yes</option>
                         <option value="2">No</option>
@@ -159,12 +145,12 @@
                 </div>
             </div>
         </div>
-        <p class="title is-3">Question 9</p>
+        <p class="title is-3">Question 8</p>
         <p class="subtitle is-5">What form of travel would you enjoy most?</p>
         <div class="field">
             <div class="control">
                 <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q5">
+                    <select data-placeholder="" class="chosen-select" id="q8">
                         <option value=""></option>
                         <option value="1">Drive</option>
                         <option value="2">Train</option>
@@ -209,20 +195,25 @@
           </footer>
 
 <br>
-<div class="modal-content">
+<div id="resultsModal" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h2 class="modal-title"><strong>Best Match</strong></h2>
+            <h2 class="modal-title"><strong>Your next destination..</strong></h2>
         </div>
         <div class="modal-body">
             <h2 id="matchName"></h2>
-            <img id="matchImg" src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg"
-                alt="">
+            <h2 id="matchClimate"></h2>
+            <h2 id="matchBestSeason"></h2>
+            
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
     </div>
+  </div>
+</div>
     
 
 

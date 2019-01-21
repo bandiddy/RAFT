@@ -23,9 +23,13 @@ $(".form-control").on("submit", function (event) {
         };
 
         $.post("/api/locations", surveyData).then(function(data){
+            console.log(surveyData);
             $("#matchName").text(data.country);
-            console.log(surveyData)
+            $("#matchClimate").text(data.country + " has a " + data.climate + " climate");
+            $("#matchBestSeason").text("The best time to go is in " + data.bestSeason);
+            $("#resultsModal").modal('toggle');
            
+         
         })
 
     }
