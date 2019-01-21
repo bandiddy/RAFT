@@ -5,7 +5,7 @@
     "database": "travel_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": 8889
+    "port": 3306
   },
   "test": {
     "username": "root",
@@ -13,8 +13,12 @@
     "database": "travel_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": 8889
+    "port": 3306
+    "scripts": {
+      "test": "mocha"
+    }
   },
+
   "production": {
     "username": "root",
     "password": "root",

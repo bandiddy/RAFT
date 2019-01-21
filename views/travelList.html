@@ -44,8 +44,11 @@
         <br>
         <br>
         <ul ng-app="tlApp" ng-controller="tlController">
-            <li ng-repeat="x in destinations">
-                {{x.name}}
+            <li ng-repeat="row in destinations">
+                {{row.id}}
+                {{row.name}}
+                {{row.country}}
+                <a ng-click="delete(row.id, $index)">Delete</a>
             </li>
         </ul>
         <br>
@@ -53,7 +56,6 @@
         <br>
         <br>
         <hr>
-        <a href="/create">Click me to tell us where you've been</a>
         </section>
         <footer class="footer">
             <div class="team">
@@ -73,9 +75,6 @@
             </div>
         </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="/assets/js/members.js"></script>
-        </ul>
 </body>
 
 </html>
