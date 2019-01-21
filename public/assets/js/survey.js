@@ -1,27 +1,37 @@
-$(document).ready(function () {
-    $("#submit").on("click", function () {
-        console.log($("#q1").val())
-        function validateForm() {
-            var isValid = true;
-            $('.chosen-select').each(function () {
-                if ($(this).val() === "")
-                    isValid = false
-            })
-            return isValid;
-        }
-        if (validateForm() == true) {
-            var surveyData = {};
-            $.get(("/api/locations").then(function (req) {
-                surveyData.UserId = req[0].id;
-                surveyData.climate = $("#q1").val();
-                surveyData.bestSeason = $("#q3").val();
-            }).then(function (req) {
-                
-            }));
-        }
-        else {
-            alert("Please fill out all fields before submitting!");
-        }
-        return false;
-    });
+$(document).ready(function(){
+
+
+
+$(".form-control").on("submit", function (event) {
+    event.preventDefault();
+  
+    function validateForm() {
+        var isValid = true;
+     
+      $('.chosen-select').each(function () {
+            if ($(this).val() === "")
+                isValid = false
+        })
+        return isValid;
+    }
+    if (validateForm() == true) {
+        
+        var surveyData = {
+           country: '',
+           climate: $("#q1").val(),
+           bestSeason: $("#q2").val()
+        };
+
+        $.post("/api/locations", surveyData).then(function(data){
+            
+        })
+
+    }
+
+    else {
+        alert("Please fill out all fields before submitting!");
+    }
+
+    return false;
+  });
 })

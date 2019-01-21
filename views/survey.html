@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+    <script src="/assets/js/survey.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
@@ -35,6 +36,7 @@
         <div>
             <p class="title is-1 is-center">Travel Questions</p>
             <hr>
+            <form class="form-control">
             <p class="title is-3">Question 1</p>
             <p class="subtitle is-5">What kind of climate do you enjoy?</p>
             <div class="field">
@@ -159,10 +161,19 @@
                 </div>
             </div>
         </div>
-        <button href="/travelList" type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>
-            Submit</button>
+
+
+
+
+        <br>
+        <br>
+        
+        <button class="button is-primary is-rounded" type="submit"
+        id="submit">Submit</button>
+
+
         <hr>
+        </form>
     </div>
 
     <footer class="footer">
@@ -179,9 +190,28 @@
             <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
             <p class="title is-1 is-primary">
                 &copy;RAFT
-            </p>
+              </p>
+            </div>
+          </footer>
+
+<br>
+<div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
         </div>
-    </footer>
+        <div class="modal-body">
+            <h2 id="matchName"></h2>
+            <img id="matchImg" src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg"
+                alt="">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+    
+
+
 </body>
 
 </html>

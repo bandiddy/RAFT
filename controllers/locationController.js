@@ -43,13 +43,19 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.get("/api/locations", function (req, res) {
+router.get("/api/locations/list", function(req, res) {
+    db.Destination.findAll().then(function (results) {
+        res.json(results);
+});
+
+router.post("/api/locations", function (req, res) {
     db.Destination.findOne({
         where: {
             climate: req.body.climate,
             bestSeason: req.body.bestSeason
         }
     }).then(function (results) {
+        console.log("HELLO");
         res.json(results);
     }).catch(function (err) {
         res.json({
@@ -59,13 +65,12 @@ router.get("/api/locations", function (req, res) {
 })
 
 router.post("/api/locations/new", function (req, res) {
-    console.log(req.body);
     db.Destination.create({
         name: req.body.name,
         country: req.body.country,
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
-        climate: req.body.climate,
+       
         UserId: req.user.id
     }).then(function (results) {
         res.redirect("/travelList");
