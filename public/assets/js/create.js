@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $(".data-input").on("submit", function (event) {
         event.preventDefault();
         function validateForm() {
