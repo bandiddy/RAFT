@@ -100,5 +100,14 @@ router.get("/api/userID", function (req, res) {
     }
 });
 
+router.delete("/api/locations/:id", function(req, res) {
+    db.Destination.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+  });
+
+
 
 module.exports = router;
