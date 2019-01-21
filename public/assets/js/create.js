@@ -13,6 +13,7 @@ $(document).ready(function () {
         if (validateForm() == true) {
             var userData = {};
             $.get("/api/userID").then(function(req) {
+                userData.name = $('#nameInput').val().trim();
                 userData.name = $('#countryInput').val().trim();
                 userData.UserId = req[0].id;
                 userData.climate = $("#q3").val();

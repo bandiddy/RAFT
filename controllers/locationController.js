@@ -74,6 +74,16 @@ router.post("/api/locations/new", function (req, res) {
     });
 });
 
+router.delete("/api/travelList/:id", function(req, res){
+    db.Destination.destroy({ 
+        where: {
+        id: req.params.id
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+});
+
 router.get("/logout", function (req, res) {
     req.logout();
     res.redirect("/");

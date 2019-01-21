@@ -15,84 +15,85 @@ var reset = process.argv[2] === 'reset' ? { force: true } : {};
 db.sequelize.sync(reset).then(function () {
   //1
   db.Destination.create({
-    name: "China",
+    name: "Beijing",
     country: "China",
     climate: "Temperate",
     bestSeason: "Spring",
   });
   db.Destination.create({
-    name: "Japan",
+    name: "Tokyo",
     country: "Japan",
     climate: "Temperate",
-    bestSeason: "Spring",
+    bestSeason: "Fall",
   });
   db.Destination.create({
-    name: "USA",
+    name: "Los Angeles",
     country: "USA",
     climate: "Sunny",
     bestSeason: "Summer",
   });
   db.Destination.create({
-    name: "France",
+    name: "Paris",
     country: "France",
     climate: "Brisk",
     bestSeason: "Fall",
   });
   db.Destination.create({
-    name: "England",
+    name: "London",
     country: "England",
     climate: "Brisk",
     bestSeason: "Spring",
   });
   db.Destination.create({
-    name: "Italy",
+    name: "Rome",
     country: "Italy",
     climate: "Sunny",
+    bestSeason: "Spring",
+  });
+  db.Destination.create({
+    name: "Queenstown",
+    country: "New Zealand",
+    climate: "Brisk",
     bestSeason: "Summer",
   });
   db.Destination.create({
-    name: "New Zealand",
-    country: "New Zealand",
-    climate: "Brisk",
-    bestSeason: "Fall",
-  });
-  db.Destination.create({
-    name: "Thailand",
+    name: "Bangkok",
     country: "Thailand",
     climate: "Tropical",
     bestSeason: "Spring",
   });
   db.Destination.create({
-    name: "UAE",
+    name: "Abu Dhabi",
     country: "UAE",
     climate: "Sunny",
-    bestSeason: "Summer",
+    bestSeason: "Winter",
   });
   db.Destination.create({
-    name: "Spain",
+    name: "Barcelona",
     country: "Spain",
     climate: "Sunny",
-    bestSeason: "Summer",
+    bestSeason: "Fall",
   });
   db.Destination.create({
-    name: "Argentina",
+    name: "Buenos Aires",
     country: "Argentina",
-    climate: "Sunny",
-    bestSeason: "Spring",
+    climate: "Temperate",
+    bestSeason: "SWinter",
   });
   db.Destination.create({
-    name: "Brazil",
+    name: "Rio de Janeiro",
     country: "Brazil",
     climate: "Tropical",
     bestSeason: "Summer",
   });
   db.Destination.create({
+    name: "Athens",
     country: "Greece",
     climate: "Sunny",
     bestSeason: "Summer",
   });
   db.Destination.create({
-    name: "Australia",
+    name: "Sydney",
     country: "Australia",
     climate: "Temperate",
     bestSeason: "Fall",
@@ -104,10 +105,10 @@ db.sequelize.sync(reset).then(function () {
     bestSeason: "Spring",
   });
   db.Destination.create({
-    name: "Costa Rica",
+    name: "San Jose",
     country: "Costa Rica",
     climate: "Tropical",
-    bestSeason: "Summer"
+    bestSeason: "Fall"
   });
   db.Destination.create({
     name: "Maldives",
@@ -116,32 +117,32 @@ db.sequelize.sync(reset).then(function () {
     bestSeason: "Summer",
   });
   db.Destination.create({
-    name: "Ireland",
+    name: "Dublin",
     country: "Ireland",
     climate: "Snowy",
     bestSeason: "Winter",
 
   });
   db.Destination.create({
-    name: "Egypt",
+    name: "Cairo",
     country: "Egypt",
     climate: "Sunny",
     bestSeason: "Summer",
   });
   db.Destination.create({
-    name: "South Africa",
+    name: "Cape Town",
     country: "South Africa",
     climate: "Temperate",
     bestSeason: "Spring",
   });
   db.Destination.create({
-    name: "Germany",
+    name: "Berlin",
     country: "Germany",
     climate: "Brisk",
     bestSeason: "Fall",
   });
   db.Destination.create({
-    name: "Norway",
+    name: "Oslo",
     country: "Norway",
     climate: "Snowy",
     bestSeason: "Fall",

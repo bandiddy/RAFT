@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Passport Authentication</title>
+    <title>Welcome to RAFT</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/assets/css/style.css" type="text/css" rel="stylesheet">
@@ -30,8 +30,9 @@
             </div>
         </div>
     </section>
+
     <div class="container" id="container">
-        <h1>Login Here</h1>
+        <h2 class="sign-header">Login Here</h2>
         <form class="login">
             <div class="field">
                 <p class="control has-icons-left has-icons-right">
@@ -54,7 +55,7 @@
             </div>
             <div class="field">
                 <p class="control">
-                    <button href="/main" class="button is-primary is-rounded" type="submit">
+                    <button href="/main" id="login-submit" class="button is-primary is-rounded" type="submit">
                         Login
                     </button>
                 </p>
@@ -62,25 +63,28 @@
         </form>
         <br />
         <p>Or sign up <a href="/signup">here</a></p>
-    </div>
-    <footer class="footer">
-        <div class="team">
-            <h3>TEAM TIGER SHARKS</h3>
-            <ul>
-                <li>Alvin Joesph</li>
-                <li>James Cho</li>
-                <li>Kelan Moffatt</li>
-                <li>Calum Ragan</li>
-            </ul>
-        </div>
-        <div class="content has-text-centered">
-            <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
-            <p class="title is-1 is-primary">
-                &copy;RAFT
-            </p>
-        </div>
-    </footer>
 
+        <footer class="footer">
+            <div class="team">
+                <h3>TEAM TIGER SHARKS</h3>
+                <ul>
+                    <li>Alvin Joesph</li>
+                    <li>James Cho</li>
+                    <li>Kelan Moffatt</li>
+                    <li>Calum Ragan</li>
+                </ul>
+
+            </div>
+
+            <div class="content has-text-centered">
+                <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
+                <p class="title is-1 is-primary">
+                    &copy;RAFT
+                </p>
+            </div>
+        </footer>
+
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/login.js"></script>
 </body>
