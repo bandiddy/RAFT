@@ -37,62 +37,62 @@
             <p class="title is-1 is-center">Travel Questions</p>
             <hr>
             <form class="form-control">
-            <p class="title is-3">Question 1</p>
-            <p class="subtitle is-5">What kind of climate do you enjoy?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q1">
-                            <option value=""></option>
-                            <option value="Sunny">Sunny</option>
-                            <option value="Tropical">Tropical</option>
-                            <option value="Snowy">Snowy</option>
-                            <option value="Temperate">Temperate</option>
-                        </select>
+                <p class="title is-3">Question 1</p>
+                <p class="subtitle is-5">What kind of climate do you enjoy?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q1">
+                                <option value=""></option>
+                                <option value="Sunny">Sunny</option>
+                                <option value="Tropical">Tropical</option>
+                                <option value="Snowy">Snowy</option>
+                                <option value="Temperate">Temperate</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p class="title is-3">Question 2</p>
-            <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q2">
-                            <option value=""></option>
-                            <option value="Fall">Fall</option>
-                            <option value="Winter">Winter</option>
-                            <option value="Spring">Spring</option>
-                            <option value="Summer">Summer</option>
-                        </select>
+                <p class="title is-3">Question 2</p>
+                <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q2">
+                                <option value=""></option>
+                                <option value="Fall">Fall</option>
+                                <option value="Winter">Winter</option>
+                                <option value="Spring">Spring</option>
+                                <option value="Summer">Summer</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p class="title is-3">Question 3</p>
-            <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q3">
-                            <option value=""></option>
-                            <option value="1">Relaxing</option>
-                            <option value="2">Adventure</option>
-                        </select>
+                <p class="title is-3">Question 3</p>
+                <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q3">
+                                <option value=""></option>
+                                <option value="1">Relaxing</option>
+                                <option value="2">Adventure</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p class="title is-3">Question 4</p>
-            <p class="subtitle is-5">Do you enjoy taveling with others?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q4">
-                            <option value=""></option>
-                            <option value="1">Yes</option>
-                            <option value="2">No</option>
-                        </select>
+                <p class="title is-3">Question 4</p>
+                <p class="subtitle is-5">Do you enjoy taveling with others?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q4">
+                                <option value=""></option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
         <p class="title is-3">Question 5</p>
         <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
@@ -167,13 +167,31 @@
 
         <br>
         <br>
-        
-        <button class="button is-primary is-rounded" type="submit"
-        id="submit">Submit</button>
+
+        <button class="button is-primary is-rounded" type="submit" id="submit">Submit</button>
 
 
         <hr>
         </form>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Your next destination..</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <h2 id="matchClimate"></h2>
+                    <h2 id="matchBestSeason"></h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+     
     </div>
 
     <footer class="footer">
@@ -190,26 +208,13 @@
             <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
             <p class="title is-1 is-primary">
                 &copy;RAFT
-              </p>
-            </div>
-          </footer>
+            </p>
+        </div>
+    </footer>
 
-<br>
-<div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h2 class="modal-title"><strong>Best Match</strong></h2>
-        </div>
-        <div class="modal-body">
-            <h2 id="matchName"></h2>
-            <img id="matchImg" src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg"
-                alt="">
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-    </div>
-    
+    <br>
+
+
 
 
 </body>

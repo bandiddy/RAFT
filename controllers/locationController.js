@@ -43,10 +43,6 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.get("/api/locations/list", function(req, res) {
-    db.Destination.findAll().then(function (results) {
-        res.json(results);
-});
 
 router.post("/api/locations", function (req, res) {
     db.Destination.findOne({
@@ -55,16 +51,16 @@ router.post("/api/locations", function (req, res) {
             bestSeason: req.body.bestSeason
         }
     }).then(function (results) {
-        console.log("HELLO");
-        res.json(results);
+        res.send(results);
     }).catch(function (err) {
         res.json({
             error: err
         });
     });
-})
+});
 
 router.post("/api/locations/new", function (req, res) {
+    console.log(req.body);
     db.Destination.create({
         name: req.body.name,
         country: req.body.country,
