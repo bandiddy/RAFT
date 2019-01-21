@@ -43,8 +43,7 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.post("/api/locations", function (req, res) {
-
+router.get("/api/locations", function (req, res) {
     db.Destination.findOne({
         where: {
             climate: req.body.climate,
