@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $(".data-input").on("submit", function (event) {
         event.preventDefault();
         function validateForm() {
@@ -26,7 +27,7 @@ $(document).ready(function () {
         else {
             alert("Please fill out all fields before submitting!");
         }
-
         return false;
     });
+
 })

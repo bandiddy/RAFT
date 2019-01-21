@@ -8,10 +8,6 @@ var db = require("../models");
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
-router.get("/main", function (req, res) {
-    res.sendFile(path.join(__dirname, '../views/main.html'));
-});
-
 router.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, '../views/signup.html'));
 });
@@ -47,22 +43,21 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.get("/api/locations", function (req, res) {
 
-    db.Destination.findAll({
+router.post("/api/locations", function (req, res) {
+    db.Destination.findOne({
         where: {
             climate: req.body.climate,
             bestSeason: req.body.bestSeason
         }
     }).then(function (results) {
-        res.json(results);
-        res.json(db.Destination)
+        res.send(results);
     }).catch(function (err) {
         res.json({
             error: err
         });
     });
-})
+});
 
 
 router.post("/api/locations/new", function (req, res) {
@@ -74,9 +69,8 @@ router.post("/api/locations/new", function (req, res) {
         bestSeason: req.body.bestSeason,
        
         UserId: req.user.id
-
     }).then(function (results) {
-        res.json(results);
+        res.redirect("/travelList");
     });
 });
 
@@ -90,7 +84,7 @@ router.get("/api/user_data", function (req, res) {
         res.json({});
     }
     else {
-        db.Destination.findAll({ where: { id: req.user.id } }).then(function (results) {
+        db.Destination.findAll({where: {UserId:req.user.id}}).then(function (results) {
             res.json(results);
         });
     }

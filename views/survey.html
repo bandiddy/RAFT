@@ -12,11 +12,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
-        
     <section class="hero is-primary is-bold">
         <a class="navbar-brand" href="/logout">Logout</a>
         <div class="hero-body">
@@ -34,78 +32,68 @@
             </div>
         </div>
     </section>
-    <br>
-
     <div class="container" id="container">
         <div>
             <p class="title is-1 is-center">Travel Questions</p>
-
             <hr>
             <form class="form-control">
-            <p class="title is-3">Question 1</p>
-            <p class="subtitle is-5">What kind of climate do you enjoy?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-
-                        <select data-placeholder="" class="chosen-select" id="q1">
-                            <option value=""></option>
-                            <option value="Sunny">Sunny</option>
-                            <option value="Tropical">Tropical</option>
-                            <option value="Snowy">Snowy</option>
-                            <option value="Temperate">Temperate</option>
-                        </select>
+                <p class="title is-3">Question 1</p>
+                <p class="subtitle is-5">What kind of climate do you enjoy?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q1">
+                                <option value=""></option>
+                                <option value="Sunny">Sunny</option>
+                                <option value="Tropical">Tropical</option>
+                                <option value="Snowy">Snowy</option>
+                                <option value="Temperate">Temperate</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <p class="title is-3">Question 2</p>
-            <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q2">
-                            <option value=""></option>
-                            <option value="Fall">Fall</option>
-                            <option value="Winter">Winter</option>
-                            <option value="Spring">Spring</option>
-                            <option value="Summer">Summer</option>
-                        </select>
+                <p class="title is-3">Question 2</p>
+                <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q2">
+                                <option value=""></option>
+                                <option value="Fall">Fall</option>
+                                <option value="Winter">Winter</option>
+                                <option value="Spring">Spring</option>
+                                <option value="Summer">Summer</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
-            <p class="title is-3">Question 3</p>
-            <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q3">
-                            <option value=""></option>
-                            <option value="1">Relaxing</option>
-                            <option value="2">Adventure</option>
-                        </select>
+                <p class="title is-3">Question 3</p>
+                <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q3">
+                                <option value=""></option>
+                                <option value="1">Relaxing</option>
+                                <option value="2">Adventure</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
-            <p class="title is-3">Question 4</p>
-            <p class="subtitle is-5">Do you enjoy taveling with others?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q4">
-                            <option value=""></option>
-                            <option value="1">Yes</option>
-                            <option value="2">No</option>
-                        </select>
+                <p class="title is-3">Question 4</p>
+                <p class="subtitle is-5">Do you enjoy taveling with others?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q4">
+                                <option value=""></option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
-
         <p class="title is-3">Question 5</p>
         <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
         <div class="field">
@@ -166,55 +154,54 @@
 
         <br>
         <br>
-        
-        <button class="button is-primary is-rounded" type="submit"
-        id="submit">Submit</button>
+
+        <button class="button is-primary is-rounded" type="submit" id="submit">Submit</button>
 
 
         <hr>
         </form>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>A RAFT has saved your travel planning</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <h2 id="matchClimate"></h2>
+                    <h2 id="matchBestSeason"></h2>
+                </div>
+                <div class="modal-footer">
+                        <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100"
+                        align="center" alt="">
+                </div>
+            </div>
+        </div>
+     
     </div>
+
     <footer class="footer">
-            <div class="team">
+        <div class="team">
             <h3>TEAM TIGER SHARKS</h3>
             <ul>
-              <li>Alvin Joesph</li>
-              <li>James Cho</li>
-              <li>Kelan Moffatt</li>
-              <li>Calum Ragan</li>
+                <li>Alvin Joesph</li>
+                <li>James Cho</li>
+                <li>Kelan Moffatt</li>
+                <li>Calum Ragan</li>
             </ul>
-            
-            </div>
-            
-            <div class="content has-text-centered">
-                <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
-              <p class="title is-1 is-primary">
+        </div>
+        <div class="content has-text-centered">
+            <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
+            <p class="title is-1 is-primary">
                 &copy;RAFT
-              </p>
-            </div>
-          </footer>
+            </p>
+        </div>
+    </footer>
 
-<br>
-<div id="resultsModal" class="modal fade" role="dialog">
-   <div class="modal-dialog">
-     <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h2 class="modal-title"><strong>Your next destination..</strong></h2>
-        </div>
-        <div class="modal-body">
-            <h2 id="matchName"></h2>
-            <h2 id="matchClimate"></h2>
-            <h2 id="matchBestSeason"></h2>
-            
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-    </div>
-  </div>
-</div>
-    
+    <br>
+
+
 
 
 </body>
