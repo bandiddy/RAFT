@@ -43,21 +43,22 @@ router.post("/api/signup", function (req, res) {
     });
 });
 
-router.post("/api/locations", function (req, res) {
 
+router.post("/api/locations", function (req, res) {
     db.Destination.findOne({
         where: {
             climate: req.body.climate,
             bestSeason: req.body.bestSeason
         }
     }).then(function (results) {
-        res.json(results);
+        res.send(results);
     }).catch(function (err) {
         res.json({
             error: err
         });
     });
-})
+});
+
 
 router.post("/api/locations/new", function (req, res) {
     console.log(req.body);
@@ -66,7 +67,7 @@ router.post("/api/locations/new", function (req, res) {
         country: req.body.country,
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
-        climate: req.body.climate,
+       
         UserId: req.user.id
     }).then(function (results) {
         res.redirect("/travelList");

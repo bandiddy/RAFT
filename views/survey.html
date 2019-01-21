@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+    <script src="/assets/js/survey.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
@@ -35,62 +36,63 @@
         <div>
             <p class="title is-1 is-center">Travel Questions</p>
             <hr>
-            <p class="title is-3">Question 1</p>
-            <p class="subtitle is-5">What kind of climate do you enjoy?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q1">
-                            <option value=""></option>
-                            <option value="Sunny">Sunny</option>
-                            <option value="Tropical">Tropical</option>
-                            <option value="Snowy">Snowy</option>
-                            <option value="Temperate">Temperate</option>
-                        </select>
+            <form class="form-control">
+                <p class="title is-3">Question 1</p>
+                <p class="subtitle is-5">What kind of climate do you enjoy?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q1">
+                                <option value=""></option>
+                                <option value="Sunny">Sunny</option>
+                                <option value="Tropical">Tropical</option>
+                                <option value="Snowy">Snowy</option>
+                                <option value="Temperate">Temperate</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p class="title is-3">Question 2</p>
-            <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q2">
-                            <option value=""></option>
-                            <option value="Fall">Fall</option>
-                            <option value="Winter">Winter</option>
-                            <option value="Spring">Spring</option>
-                            <option value="Summer">Summer</option>
-                        </select>
+                <p class="title is-3">Question 2</p>
+                <p class="subtitle is-5">What time of the year do you plan on traveling?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q2">
+                                <option value=""></option>
+                                <option value="Fall">Fall</option>
+                                <option value="Winter">Winter</option>
+                                <option value="Spring">Spring</option>
+                                <option value="Summer">Summer</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p class="title is-3">Question 3</p>
-            <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q3">
-                            <option value=""></option>
-                            <option value="1">Relaxing</option>
-                            <option value="2">Adventure</option>
-                        </select>
+                <p class="title is-3">Question 3</p>
+                <p class="subtitle is-5">What kind of travel setting do you enjoy?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q3">
+                                <option value=""></option>
+                                <option value="1">Relaxing</option>
+                                <option value="2">Adventure</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p class="title is-3">Question 4</p>
-            <p class="subtitle is-5">Do you enjoy taveling with others?</p>
-            <div class="field">
-                <div class="control">
-                    <div class="select is-primary is-medium is-rounded">
-                        <select data-placeholder="" class="chosen-select" id="q4">
-                            <option value=""></option>
-                            <option value="1">Yes</option>
-                            <option value="2">No</option>
-                        </select>
+                <p class="title is-3">Question 4</p>
+                <p class="subtitle is-5">Do you enjoy taveling with others?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q4">
+                                <option value=""></option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
         <p class="title is-3">Question 5</p>
         <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
@@ -106,19 +108,6 @@
             </div>
         </div>
         <p class="title is-3">Question 6</p>
-        <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
-        <div class="field">
-            <div class="control">
-                <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q5">
-                        <option value=""></option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <p class="title is-3">Question 7</p>
         <p class="subtitle is-5">Would you like to take palate on an adventure?</p>
         <div class="field">
             <div class="control">
@@ -131,12 +120,12 @@
                 </div>
             </div>
         </div>
-        <p class="title is-3">Question 8</p>
+        <p class="title is-3">Question 7</p>
         <p class="subtitle is-5">Would learning history about your destination be a priority on vacation?</p>
         <div class="field">
             <div class="control">
                 <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q5">
+                    <select data-placeholder="" class="chosen-select" id="q7">
                         <option value=""></option>
                         <option value="1">Yes</option>
                         <option value="2">No</option>
@@ -144,12 +133,12 @@
                 </div>
             </div>
         </div>
-        <p class="title is-3">Question 9</p>
+        <p class="title is-3">Question 8</p>
         <p class="subtitle is-5">What form of travel would you enjoy most?</p>
         <div class="field">
             <div class="control">
                 <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q5">
+                    <select data-placeholder="" class="chosen-select" id="q8">
                         <option value=""></option>
                         <option value="1">Drive</option>
                         <option value="2">Train</option>
@@ -159,10 +148,37 @@
                 </div>
             </div>
         </div>
-        <button href="/travelList" type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>
-            Submit</button>
+
+
+
+
+        <br>
+        <br>
+
+        <button class="button is-primary is-rounded" type="submit" id="submit">Submit</button>
+
+
         <hr>
+        </form>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>A RAFT has saved your travel planning</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <h2 id="matchClimate"></h2>
+                    <h2 id="matchBestSeason"></h2>
+                </div>
+                <div class="modal-footer">
+                        <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100"
+                        align="center" alt="">
+                </div>
+            </div>
+        </div>
+     
     </div>
 
     <footer class="footer">
@@ -182,6 +198,12 @@
             </p>
         </div>
     </footer>
+
+    <br>
+
+
+
+
 </body>
 
 </html>
