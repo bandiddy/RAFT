@@ -2,8 +2,8 @@ $(document).ready(function () {
     // Get the modal
     var modal = document.getElementById('myModal');
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+    
+
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
             $.post("/api/locations", surveyData).then(function (data) {
                 console.log(data);
-                $("#matchName").text(data.name);
+                $("#matchName").text("Your next destination is " + data.name);
                 $("#matchClimate").text(data.country + " has a " + data.climate + " climate");
                 $("#matchBestSeason").text("The best time to go is in " + data.bestSeason);
                 modal.style.display = "block";

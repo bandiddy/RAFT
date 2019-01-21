@@ -50,7 +50,7 @@ p {
     
 }
 
-.signup, .sign-header {
+.signup, .login, .sign-header {
     font-size: 20px;
     margin-left:3%;
     margin-top: 1%;
@@ -160,4 +160,35 @@ p {
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+  #myModal {
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
+    color:black;
+  }
+
+  .modal-title {
+    text-align:center;
+    font-size: 40px;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
+    color:black;
+  }
+  #matchName {
+    font-size:35px;
+    text-align:center;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
+    color:black;
+  }
+  #matchClimate, #matchBestSeason {
+    font-size:20px;
+    text-align:center;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
+    color:black;
+  }
+  .button  {
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
   }

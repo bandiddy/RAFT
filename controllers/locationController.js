@@ -59,6 +59,7 @@ router.post("/api/locations", function (req, res) {
     });
 });
 
+
 router.post("/api/locations/new", function (req, res) {
     console.log(req.body);
     db.Destination.create({
@@ -70,6 +71,16 @@ router.post("/api/locations/new", function (req, res) {
         UserId: req.user.id
     }).then(function (results) {
         res.redirect("/travelList");
+    });
+});
+
+router.delete("/api/travelList/:id", function(req, res){
+    db.Destination.destroy({ 
+        where: {
+        id: req.params.id
+      }
+    }).then(function(results) {
+      res.json(results);
     });
 });
 
