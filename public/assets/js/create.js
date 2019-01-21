@@ -21,7 +21,6 @@ $(document).ready(function () {
             }).then(function(req) {
                 console.log(userData);
                 $.post("/api/locations/new", userData).then(function(req) {
-                    console.log("done");
                 });
             });
         }
