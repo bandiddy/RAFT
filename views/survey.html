@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+    <script src="/assets/js/survey.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Shadows+Into+Light" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
@@ -40,6 +41,7 @@
             <p class="title is-1 is-center">Travel Questions</p>
 
             <hr>
+            <form class="form-control">
             <p class="title is-3">Question 1</p>
             <p class="subtitle is-5">What kind of climate do you enjoy?</p>
             <div class="field">
@@ -178,14 +180,13 @@
 
         <br>
         <br>
+        
+        <button class="button is-primary is-rounded" type="submit"
+        id="submit">Submit</button>
 
-
-        <button href="/travelList" type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>
-            Submit</button>
 
         <hr>
-
+        </form>
     </div>
     <footer class="footer">
             <div class="team">
@@ -207,59 +208,22 @@
             </div>
           </footer>
 
-
-
-    <script type="text/javascript">
-
-        var config = {
-            '.chosen-select': {},
-            '.chosen-select-deselect': { allow_single_deselect: true },
-            '.chosen-select-no-single': { disable_search_threshold: 8 },
-            '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
-            '.chosen-select-width': { width: "95%" }
-        }
-        // for (var selector in config) {
-        // $(selector).chosen(config[selector]);
-        // }
-        $("#submit").on("click", function () {
-            console.log("you suck")
-            function validateForm() {
-                var isValid = true;
-                $('.form-control').each(function () {
-                    if ($(this).val() === '')
-                        isValid = false;
-                });
-                $('.chosen-select').each(function () {
-                    if ($(this).val() === "")
-                        isValid = false
-                })
-                return isValid;
-            }
-            if (validateForm() == true) {
-
-                var userData = {
-                    name: input,
-                    climate: $("#q1").val(),
-                    bestSeason: $("q2").val()
-                }
-                $.ajax("/api/locations/new", {
-                    type: "POST",
-                    data: userData
-                }).then(
-                    function () {
-                        console.log("location added");
-                        location.reload();
-                    }
-                );
-            }
-            else {
-                alert("Please fill out all fields before submitting!");
-            }
-
-            return false;
-        });
-
-    </script>
+<br>
+<div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+            <h2 id="matchName"></h2>
+            <img id="matchImg" src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg"
+                alt="">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+    
 
 
 </body>

@@ -2,8 +2,9 @@ $(document).ready(function(){
 
 
 
-$("#submit").on("click", function () {
-    console.log($("#q1").val())
+$(".form-control").on("submit", function (event) {
+    event.preventDefault();
+  
     function validateForm() {
         var isValid = true;
      
@@ -15,18 +16,16 @@ $("#submit").on("click", function () {
     }
     if (validateForm() == true) {
         
-        var surveyData = {};
-        $.get("/api/userID").then(function(req){
-            surveyData.UserId = req[0].id;
-            surveyData.climate = $("#q1").val();
-            surveyData.bestSeaon = $("#q3").val();
-        }).then(function(req){
-            console.log(surveyData);
-        $.post("/api/locations", surveyData).done (function(data){
-                console.log("matching new location");
-                location.reload();
-                console.log(data);
-            });
+        var surveyData = {
+           country: '',
+           climate: $("#q1").val(),
+           bestSeason: $("#q2").val()
+        };
+
+        $.post("/api/locations", surveyData).then(function(data){
+            $("#matchName").text(data.country);
+            console.log(surveyData)
+           
         })
 
     }

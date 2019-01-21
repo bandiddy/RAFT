@@ -49,7 +49,7 @@ router.post("/api/signup", function (req, res) {
 
 router.post("/api/locations", function (req, res) {
 
-    db.Destination.findOne({
+    db.Destination.findAll({
         where: {
             climate: req.body.climate,
             bestSeason: req.body.bestSeason
@@ -70,7 +70,7 @@ router.post("/api/locations/new", function (req, res) {
         country: req.body.country,
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
-        climate: req.body.climate,
+       
         UserId: req.user.id
 
     }).then(function (results) {
