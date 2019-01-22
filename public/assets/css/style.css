@@ -110,7 +110,7 @@ p {
     margin-bottom: 2%;
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
-    color:black;
+    
 }
 #raft-list {
     margin-left:45%;
@@ -208,7 +208,7 @@ p {
     color:black;
   }
 
-  #matchImage{
+  #matchImg{
     margin-left:20%;
   }
 

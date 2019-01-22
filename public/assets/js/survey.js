@@ -36,6 +36,7 @@ $(document).ready(function () {
                 $("#matchName").text("Your next destination is " + data.name + ", " + data.country + "!");
                 $("#matchClimate").text(data.country + " has a " + data.climate + " climate" + ".");
                 $("#matchBestSeason").text("The best time to go to " + data.name + " is in the " + data.bestSeason + ".");
+                $("#matchImg").attr("src", data.image);
                 modal.style.display = "block";
             })
 
