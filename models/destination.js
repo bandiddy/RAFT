@@ -11,6 +11,9 @@ module.exports = function (sequelize, DataTypes) {
     },
     bestSeason: {
       type: DataTypes.STRING
+    },
+    image: {
+      type: DataTypes.STRING
     }
   });
   Destination.associate = function (models) {
