@@ -10,7 +10,7 @@ describe('test RAFT login', () => {
             .type('#email-input', 'james.je.cho@gmail.com')
             .type('#password-input', 'test')
             .click('#login-submit')
-            .wait(1000)
+            .wait(2000)
             .evaluate(function () {
                 var text = document.querySelector('.main').innerHTML
                 return text;
