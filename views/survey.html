@@ -15,25 +15,29 @@
 </head>
 
 <body>
-    <section class="hero is-primary is-bold">
+    <header class="hero is-primary is-bold">
         <a class="navbar-brand" href="/logout">Logout</a>
         <div class="hero-body">
-            <div class="container">
-                <img class="tree" src="https://cdn3.iconfinder.com/data/icons/beach-icons/496/Palm_Trees-512.png"
-                    height="100" width="100" align="left" alt="">
-                <h1 class="title">
-                    RAFT
-                </h1>
-                <h2 class="subtitle">
-                    Stop drowning in your travel planning anxiety
-                </h2>
-                <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100"
-                    align="right" alt="">
-            </div>
+            <a href="/main">
+                <div class="container">
+                    <img class="tree" src="https://cdn3.iconfinder.com/data/icons/beach-icons/496/Palm_Trees-512.png"
+                        height="100" width="100" align="left" alt="">
+                    <h1 class="title">
+                        RAFT
+                    </h1>
+                    <h2 class="subtitle">
+                        Stop drowning, Start planning..
+                    </h2>
+                    <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100"
+                        align="right" alt="">
+
+                </div>
+            </a>
         </div>
-    </section>
-    <div class="container" id="container">
-        <div>
+    </header>
+
+    <main>
+        <div class="container" id="container">
             <p class="title is-1 is-center">Travel Questions</p>
             <hr>
             <form class="form-control">
@@ -93,100 +97,86 @@
                         </div>
                     </div>
                 </div>
-        </div>
-        <p class="title is-3">Question 5</p>
-        <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
-        <div class="field">
-            <div class="control">
-                <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q5">
-                        <option value=""></option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
-                    </select>
+                <p class="title is-3">Question 5</p>
+                <p class="subtitle is-5">Do you enjoy outdoor adventures?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q5">
+                                <option value=""></option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
+                <p class="title is-3">Question 6</p>
+                <p class="subtitle is-5">Would you like to take palate on an adventure?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q6">
+                                <option value=""></option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <p class="title is-3">Question 7</p>
+                <p class="subtitle is-5">Would learning history about your destination be a priority on vacation?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q7">
+                                <option value=""></option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <p class="title is-3">Question 8</p>
+                <p class="subtitle is-5">What form of travel would you enjoy most?</p>
+                <div class="field">
+                    <div class="control">
+                        <div class="select is-primary is-medium is-rounded">
+                            <select data-placeholder="" class="chosen-select" id="q8">
+                                <option value=""></option>
+                                <option value="1">Drive</option>
+                                <option value="2">Train</option>
+                                <option value="1">Sail</option>
+                                <option value="2">Fly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button class="button is-primary is-rounded" type="submit" id="submit">Submit</button>
+                <hr>
+            </form>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title"><strong>A RAFT has saved your travel planning</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="matchName"></h2>
+                        <h2 id="matchClimate"></h2>
+                        <h2 id="matchBestSeason"></h2>
+                    </div>
+                    <div class="modal-footer">
+                        <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100"
+                            width="100" align="center" alt="">
+                    </div>
+                </div>
+                
             </div>
         </div>
-        <p class="title is-3">Question 6</p>
-        <p class="subtitle is-5">Would you like to take palate on an adventure?</p>
-        <div class="field">
-            <div class="control">
-                <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q6">
-                        <option value=""></option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <p class="title is-3">Question 7</p>
-        <p class="subtitle is-5">Would learning history about your destination be a priority on vacation?</p>
-        <div class="field">
-            <div class="control">
-                <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q7">
-                        <option value=""></option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <p class="title is-3">Question 8</p>
-        <p class="subtitle is-5">What form of travel would you enjoy most?</p>
-        <div class="field">
-            <div class="control">
-                <div class="select is-primary is-medium is-rounded">
-                    <select data-placeholder="" class="chosen-select" id="q8">
-                        <option value=""></option>
-                        <option value="1">Drive</option>
-                        <option value="2">Train</option>
-                        <option value="1">Sail</option>
-                        <option value="2">Fly</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-<<<<<<< HEAD
-
-
-
-
-        <br>
-        <br>
-
-        <button class="button is-primary is-rounded" type="submit" id="submit">Submit</button>
-
-
-        <hr>
-        </form>
-
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>A RAFT has saved your travel planning</strong></h2>
-                </div>
-                <div class="modal-body">
-                    <h2 id="matchName"></h2>
-                    <h2 id="matchClimate"></h2>
-                    <h2 id="matchBestSeason"></h2>
-                </div>
-                <div class="modal-footer">
-                        <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100"
-                        align="center" alt="">
-                </div>
-            </div>
-        </div>
-     
-=======
-        <button href="/travelList" type="submit" class="button is-primary is-rounded" id="submit"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>
-            Submit</button>
-        <hr>
->>>>>>> 28f33e82d9a4f4ac0d74ce3f34503f6bb0bf74b8
-    </div>
+    </main>
 
     <footer class="footer">
         <div class="team">
@@ -205,12 +195,6 @@
             </p>
         </div>
     </footer>
-
-    <br>
-
-
-
-
 </body>
 
 </html>

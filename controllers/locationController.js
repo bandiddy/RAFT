@@ -31,7 +31,6 @@ router.post("/api/login", passport.authenticate("local"), function (req, res) {
 });
 
 router.post("/api/signup", function (req, res) {
-    console.log(req.body);
     db.User.create({
         email: req.body.email,
         password: req.body.password
@@ -42,7 +41,6 @@ router.post("/api/signup", function (req, res) {
         res.json(err);
     });
 });
-
 
 router.post("/api/locations", function (req, res) {
     db.Destination.findOne({
@@ -59,28 +57,37 @@ router.post("/api/locations", function (req, res) {
     });
 });
 
-
 router.post("/api/locations/new", function (req, res) {
-    console.log(req.body);
     db.Destination.create({
         name: req.body.name,
         country: req.body.country,
         climate: req.body.climate,
         bestSeason: req.body.bestSeason,
-       
+
         UserId: req.user.id
     }).then(function (results) {
         res.redirect("/travelList");
     });
 });
 
-router.delete("/api/travelList/:id", function(req, res){
-    db.Destination.destroy({ 
+router.post("/api/locations/newSurvey", function (req, res) {
+    db.Destination.create({
+        name: req.body.name,
+        country: req.body.country,
+        climate: req.body.climate,
+        bestSeason: req.body.bestSeason,
+
+        UserId: req.user.id
+    });
+});
+
+router.delete("/api/travelList/:id", function (req, res) {
+    db.Destination.destroy({
         where: {
-        id: req.params.id
-      }
-    }).then(function(results) {
-      res.json(results);
+            id: req.params.id
+        }
+    }).then(function (results) {
+        res.json(results);
     });
 });
 
@@ -94,7 +101,7 @@ router.get("/api/user_data", function (req, res) {
         res.json({});
     }
     else {
-        db.Destination.findAll({where: {UserId:req.user.id}}).then(function (results) {
+        db.Destination.findAll({ where: { UserId: req.user.id } }).then(function (results) {
             res.json(results);
         });
     }
@@ -111,14 +118,12 @@ router.get("/api/userID", function (req, res) {
     }
 });
 
-router.delete("/api/locations/:id", function(req, res) {
+router.delete("/api/locations/:id", function (req, res) {
     db.Destination.destroy({
-      where: {
-        id: req.params.id
-      }
+        where: {
+            id: req.params.id
+        }
     })
-  });
-
-
+});
 
 module.exports = router;
