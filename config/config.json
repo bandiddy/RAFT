@@ -15,12 +15,12 @@
     "dialect": "mysql",
     "port": 3306
   },
-
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "travel_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "pbprx04lrg01nbg8",
+    "password": "t17yrd6u4naifell",
+    "database": "b95g8ryqd16h3e5a",
+    "host": "uc13jynhmkss3nve.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port": 3306
   }
 }

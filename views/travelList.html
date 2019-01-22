@@ -18,62 +18,74 @@
 </head>
 
 <body>
-    <section class="hero is-primary is-bold">
+    <header class="hero is-primary is-bold">
         <a class="navbar-brand" href="/logout">Logout</a>
         <div class="hero-body">
-            <div class="container">
-                <img class="tree" href="/main" src="https://cdn3.iconfinder.com/data/icons/beach-icons/496/Palm_Trees-512.png"
-                    height="100" width="100" align="left" alt="">
-                <h1 class="title">
-                    RAFT
-                </h1>
-                <h2 class="subtitle">
-                    Stop drowning, Start planning..
-                </h2>
-                <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="150" width="150"
-                    align="right" alt="">
-            </div>
+            <a href="/main">
+                <div class="container">
+                    <img class="tree" src="https://cdn3.iconfinder.com/data/icons/beach-icons/496/Palm_Trees-512.png"
+                        height="100" width="100" align="left" alt="">
+                    <h1 class="title">
+                        RAFT
+                    </h1>
+                    <h2 class="subtitle">
+                        Stop drowning, Start planning..
+                    </h2>
+                    <img class="raft" src="https://image.flaticon.com/icons/png/512/208/208590.png" height="100" width="100"
+                        align="right" alt="">
+
+                </div>
+            </a>
         </div>
-    </section>
-    <div class="container" id="container">
-        <h1 class="title is-1" id="title">Your Future Travel Destination</h1>
-        <h2 class="subtitle is 5" id="title">a RAFT has saved you rejoice!</h2>
-        <hr>
-        <br>
-        <br>
-        <br>
-        <br>
-        <ul ng-app="tlApp" ng-controller="tlController">
-            <li ng-repeat="row in destinations">
-                {{row.id}}
-                {{row.name}}
-                {{row.country}}
-                <a ng-click="delete(row.id, $index)">Delete</a>
-            </li>
-        </ul>
-        <br>
-        <br>
-        <br>
-        <br>
-        <hr>
-        </section>
-        <footer class="footer">
-            <div class="team">
-                <h3>TEAM TIGER SHARKS</h3>
-                <ul>
-                    <li>Alvin Joesph</li>
-                    <li>James Cho</li>
-                    <li>Kelan Moffatt</li>
-                    <li>Calum Ragan</li>
-                </ul>
-            </div>
-            <div class="content has-text-centered">
-                <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
-                <p class="title is-1 is-primary">
-                    &copy;RAFT
-                </p>
-            </div>
-        </footer>
+    </header>
+
+    <main>
+        <div class="container" id="container">
+            <h1 class="title is-1" id="title">Your Future Travel Destination</h1>
+            <h2 class="subtitle is 5" id="title">a raft has saved your travel planning</h2>
+            <hr>
+            <table ng-app="tlApp" ng-controller="tlController" class="locationTable">
+                <tr>
+                    <th>Delete</th>
+                    <th>Name</th>
+                    <th>Country</th>
+                    <th>Climate</th>
+                    <th>Best Season</th>
+                </tr>
+                <tr ng-repeat="row in destinations">
+                    <td><a ng-click="delete(row.id, $index)">Delete</a></td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.country}}</td>
+                    <td>{{row.climate}}</td>
+                    <td>{{row.bestSeason}}</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="team">
+            <h3>TEAM TIGER SHARKS</h3>
+            <ul>
+                <li>Alvin Joesph</li>
+                <li>James Cho</li>
+                <li>Kelan Moffatt</li>
+                <li>Calum Ragan</li>
+            </ul>
+        </div>
+        <div class="content has-text-centered">
+            <img class="shark" src="/assets/images/tigershark2.png" alt="" height="150" width="150" align="left">
+            <p class="title is-1 is-primary">
+                &copy;RAFT
+            </p>
+        </div>
+    </footer>
 
 </body>
 
