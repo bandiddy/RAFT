@@ -31,7 +31,6 @@ router.post("/api/login", passport.authenticate("local"), function (req, res) {
 });
 
 router.post("/api/signup", function (req, res) {
-    console.log(req.body);
     db.User.create({
         email: req.body.email,
         password: req.body.password
@@ -59,7 +58,6 @@ router.post("/api/locations", function (req, res) {
 });
 
 router.post("/api/locations/new", function (req, res) {
-    console.log(req.body);
     db.Destination.create({
         name: req.body.name,
         country: req.body.country,
@@ -69,6 +67,17 @@ router.post("/api/locations/new", function (req, res) {
         UserId: req.user.id
     }).then(function (results) {
         res.redirect("/travelList");
+    });
+});
+
+router.post("/api/locations/newSurvey", function (req, res) {
+    db.Destination.create({
+        name: req.body.name,
+        country: req.body.country,
+        climate: req.body.climate,
+        bestSeason: req.body.bestSeason,
+
+        UserId: req.user.id
     });
 });
 

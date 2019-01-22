@@ -32,7 +32,7 @@ $(document).ready(function () {
             };
 
             $.post("/api/locations", surveyData).then(function (data) {
-                console.log(data);
+                $.post("/api/locations/newSurvey", data);
                 $("#matchName").text("Your next destination is " + data.name);
                 $("#matchClimate").text(data.country + " has a " + data.climate + " climate");
                 $("#matchBestSeason").text("The best time to go is in " + data.bestSeason);
