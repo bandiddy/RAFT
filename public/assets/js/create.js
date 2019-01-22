@@ -28,6 +28,7 @@ $(document).ready(function () {
             alert("Please fill out all fields before submitting!");
         }
         return false;
+        
     });
 
 })
