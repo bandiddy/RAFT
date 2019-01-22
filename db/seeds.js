@@ -145,7 +145,7 @@ db.sequelize.sync(reset).then(function () {
     name: "Cairo",
     country: "Egypt",
     climate: "Sunny",
-    bestSeason: "Summer",
+    bestSeason: "Spring",
     image:"/assets/images/pyramids.jpg"
   });
   db.Destination.create({
