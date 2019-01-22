@@ -33,9 +33,9 @@ $(document).ready(function () {
 
             $.post("/api/locations", surveyData).then(function (data) {
                 $.post("/api/locations/newSurvey", data);
-                $("#matchName").text("Your next destination is " + data.name);
-                $("#matchClimate").text(data.country + " has a " + data.climate + " climate");
-                $("#matchBestSeason").text("The best time to go is in " + data.bestSeason);
+                $("#matchName").text("Your next destination is " + data.name + ", " + data.country + "!");
+                $("#matchClimate").text(data.country + " has a " + data.climate + " climate" + ".");
+                $("#matchBestSeason").text("The best time to go to " + data.name + " is in the " + data.bestSeason + ".");
                 modal.style.display = "block";
             })
 

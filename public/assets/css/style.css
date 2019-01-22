@@ -15,7 +15,8 @@ p {
 }
 
 .raft {
-    margin-top: -8%;
+    margin-top: -12%;
+    float: right;
 }
 .tree {
     margin-top: -2%;
@@ -94,7 +95,7 @@ p {
     margin-top: 2%;
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
-    color:black;
+    
 }
 .subtitle {
     
@@ -117,7 +118,15 @@ p {
     margin-bottom: 2%;
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
-    color:black;
+    
+}
+#raft-list {
+    margin-left:44.5%;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Audiowide', cursive;
+    
 }
 .shark {
     margin-top: -2%;
@@ -197,7 +206,11 @@ p {
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Audiowide', cursive;
     color:black;
-}
+  }
+
+  #matchImage{
+    margin-left:20%;
+  }
 
   .button  {
     font-family: 'Shadows Into Light', cursive;
