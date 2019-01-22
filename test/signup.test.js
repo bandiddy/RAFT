@@ -8,8 +8,8 @@ describe('test RAFT signup', () => {
         nightmare
             .goto('https://raft-travel.herokuapp.com/')
             .click('#signup')
-            .type('#email-input', 'test@gmail.com')
-            .type('#password-input', 'test')
+            .type('#email-input', 'hydro@gmail.com')
+            .type('#password-input', 'hydro')
             .click('#signup-submit')
             .wait(1000)
             .evaluate(function () {
